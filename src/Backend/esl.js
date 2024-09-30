@@ -1,14 +1,18 @@
+const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const { XMLParser } = require('fast-xml-parser');
 const csvWriter = require('fast-csv');
 
+const router = express.Router();
+
 const inputDir = path.join('../data/ESL-Files');
 const outputCsvDir = path.join('../data/ESL-CSV');
 const outputJsonDir = path.join('../data/ESL-JSON');
 
-if (!fs.existsSync(outputCsvDir)) fs.mkdirSync(outputCsvDir);
-if (!fs.existsSync(outputJsonDir)) fs.mkdirSync(outputJsonDir);
+
+router.use(express.json())
+router.use(express.urlencoded({ extended: true }))
 
 function convertXMLToCSV(xmlFilePath, outputCsvFilePath) {
     const xmlData = fs.readFileSync(xmlFilePath, 'utf-8');
@@ -160,5 +164,9 @@ function processAllXMLFiles() {
         });
     });
 }
+router.get('/convert', (req, res) => {
+    processAllXMLFiles();
+    res.json({ message: 'Conversion started' });
+});
 
-processAllXMLFiles();
+module.exports = router;
