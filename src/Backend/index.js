@@ -6,7 +6,7 @@
 
 const express = require('express')
 const sdat = require('./sdat.js')
-const esl = require('./esl.js')
+// const esl = require('./esl.js')
 
 const app = express()
 const host = '127.0.0.1'
@@ -17,7 +17,7 @@ app.use(express.json())
 app.use(log)
 
 app.use('/sdat', sdat)
-app.use('/esl', esl)
+// app.use('/esl', esl)
 
 // Catch-all route for undefined endpoints
 app.get('*', (req, res) => {
