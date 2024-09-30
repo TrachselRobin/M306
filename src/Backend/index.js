@@ -17,6 +17,7 @@ app.use(express.json())
 app.use(log)
 
 app.use('/sdat', sdat)
+app.use('/esl', esl)
 
 // Catch-all route for undefined endpoints
 app.get('*', (req, res) => {
