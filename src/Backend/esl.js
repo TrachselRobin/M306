@@ -14,4 +14,3 @@ router.get('', (req, res) => {
     res.json({ message: 'esl test' })
 })
 
-//Test
