@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2015 sp2 (x64) (http://www.altova.com) von ICS (swissgrid ag) bearbeitet -->
+<!--XML-Beispieldatei von XMLSpy generiert v2015 sp2 (x64) (http://www.altova.com)-->
+<rsm:MasterdataMeteringPoint_10 xmlns:rsm="http://www.strom.ch" xmlns:eCH-0010="http://www.ech.ch/xmlns/eCH-0010/6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.strom.ch MasterdataMeteringPoint_1p0.xsd">
+	<rsm:MasterdataMeteringPoint_HeaderInformation>
+		<rsm:HeaderVersion>1.0</rsm:HeaderVersion>
+		<rsm:Sender>
+			<rsm:ID>
+				<rsm:EICID schemeAgencyID="305">12X-PARTY-B-000E</rsm:EICID>
+			</rsm:ID>
+			<rsm:Role>DDZ</rsm:Role>
+		</rsm:Sender>
+		<rsm:Receiver>
+			<rsm:ID>
+				<rsm:EICID schemeAgencyID="305">12X-PARTY-A-000K</rsm:EICID>
+			</rsm:ID>
+			<rsm:Role>DDQ</rsm:Role>
+		</rsm:Receiver>
+		<rsm:InstanceDocument>
+			<rsm:DictionaryAgencyID>260</rsm:DictionaryAgencyID>
+			<rsm:VersionID listAgencyID="260">2007B</rsm:VersionID>
+			<rsm:DocumentID>DID_Beispiel_3_5_7_x_QMPIn_22_11a</rsm:DocumentID>
+			<rsm:DocumentType>
+				<rsm:ebIXCode>E07</rsm:ebIXCode>
+			</rsm:DocumentType>
+			<rsm:Creation>2015-04-26T09:30:47Z</rsm:Creation>
+			<rsm:Status>9</rsm:Status>
+		</rsm:InstanceDocument>
+		<rsm:BusinessScopeProcess>
+			<rsm:BusinessReasonType codeListAgency="260">
+				<rsm:VSENationalCode>C22</rsm:VSENationalCode>
+			</rsm:BusinessReasonType>
+			<rsm:BusinessDomainType listAgencyID="260">E01</rsm:BusinessDomainType>
+			<rsm:BusinessSectorType>23</rsm:BusinessSectorType>
+			<rsm:BusinessService>
+				<rsm:ServiceTransaction isIntelligibleCheckRequired="true"/>
+			</rsm:BusinessService>
+		</rsm:BusinessScopeProcess>
+	</rsm:MasterdataMeteringPoint_HeaderInformation>
+	<rsm:Instance>
+		<rsm:DocumentID>DID_Beispiel_3_5_7_x_QMPIn_22_11b</rsm:DocumentID>
+		<rsm:RequestedTransaction>
+			<rsm:Status>41</rsm:Status>
+			<rsm:Reason codeListAgency="260">
+				<rsm:ebIXCode>E10</rsm:ebIXCode>
+			</rsm:Reason>
+		</rsm:RequestedTransaction>
+		<rsm:ReferenceToRequestingDocumentID>DID_Beispiel_3_5_7_x_QMPIn_20_11b</rsm:ReferenceToRequestingDocumentID>
+
+	</rsm:Instance>
+</rsm:MasterdataMeteringPoint_10>

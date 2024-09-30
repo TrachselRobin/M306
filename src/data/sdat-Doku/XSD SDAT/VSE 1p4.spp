@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+	<Folder FolderName="XML Files" ExtStr="xml;cml;math;mtx;rdf;smil;svg;wml">
+		<File FilePath="Beispiel_3_2_1_3_Lieferantenwechsel_Wechselanfrage_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_2_1_4_Lieferantenwechsel_Wechselbestätigung_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_2_1_5_Lieferantenwechsel_Wechselablehnung_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_2_1_6_Lieferantenwechsel_Wechselinformation_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_2_1_7_Lieferantenwechsel_Wechselinformation_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_2_2_3_Lieferende_Abmeldung_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_2_2_4_Lieferende_Abmeldungsbestätigung_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_2_2_5_Lieferende_Abmeldungsablehnung_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_2_2_6_Lieferende_Abmeldungsinformation_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_2_3_3_Grundversorgung_Anmeldung_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_2_3_4_Grundversorgung_Information_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_2_4_3_Ersatzversorgung_Anmeldung_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_2_4_4_Ersatzversorgung_Information_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_3_1_3_EndverbraucherEinzugWechsel_Anmeldung_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_3_1_4_EndverbraucherEinzugWechsel_Bestätigung_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_3_1_5_EndverbraucherEinzugWechsel_Ablehnung_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_3_1_6_EndverbraucherEinzugWechsel_Information_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_3_1_7_EndverbraucherEinzugWechsel_Information_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_3_2_3_EndverbraucherAuszug_Abmeldung_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_3_2_4_EndverbraucherAuszug_Bestätigung_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_3_2_5_EndverbraucherAuszug_Ablehnung_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_3_2_6_EndverbraucherAuszug_Information_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_4_1_3_AnmeldungSDV_Anmeldung_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_4_1_4_AnmeldungSDV_Bestätigung_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_4_1_5_AnmeldungSDV_Ablehnung_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_4_1_6_AnmeldungSDV_Information_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_4_2_3_AbmeldungSDV_Abmeldung_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_4_2_4_AbmeldungSDV_Bestätigung_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_4_2_5_AbmeldungSDV_Ablehnung_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_4_2_6_AbmeldungSDV_Information_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_5_1_3_StammdatenänderungEVdurchLF_Information_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_5_2_3_StammdatenänderungMesspunkt_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_5_3_3_ZuordnungslisteLF_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_5_3_4_ZuordnungslisteSDV_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_5_4_3_AnfrageMesspunktbezeichnung_Anfrage_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_5_4_4_AnfrageMesspunktbezeichnung_Antwort_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_5_4_5_AnfrageMesspunktbezeichnung_Ablehnung_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_5_5_3_AnfrageWechseldatum_Anfrage_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_5_5_4_AnfrageWechseldatum_Antwort_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_5_5_5_AnfrageWechseldatum_Ablehnung_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_5_6_3_AnfrageMesspunktinformationen_Anfrage_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_5_6_4_AnfrageMesspunktinformationen_Antwort_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_5_6_5_AnfrageMesspunktinformationen_Ablehnung_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_5_7_3_AnfrageMessdaten_Anfrage_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_5_7_4_AnfrageMessdaten_Antwort_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_5_7_5_AnfrageMessdaten_Ablehnung_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_5_8_3_AnfrageMessdatenaggregate_Anfrage_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_5_8_4_AnfrageMessdatenaggregate_Antwort_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_3_5_8_5_AnfrageMessdatenaggregate_Ablehnung_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_4_3_3_Energieabrechnung_Prognose_1p3.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_4_4_3_Kostenwälzung_BruttoEnergie_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_4_4_7_Kostenwälzung_Pumpenergie_1p3.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_4_5_3_Kostenzuteilung_Bruttoenergie_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_4_6_3_BGAbrechnung_Übergabestellen_1p3.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_4_6_4_BGAbrechnung_VNB_an_LF_EZ_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_4_6_5_BGAbrechnung_VNB_an_BGV_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_4_6_6_BGAbrechnung_VNB_an_ÜNB_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_4_6_7_BGAbrechnung_ÜNB_an_BGV_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_4_8_3_EinspeisegängeHKN_1p3.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_4_8_5_ProduktionHKN_1p3.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_5_1_0_SDL_MIT_KEV_ANLAGEN_a_1p0.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_5_1_1_OSTRAL_KW_a_1p0.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_Anhang1_AckOfAcceptance_zu_3_2_1_3_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_Anhang1_AckOfAcceptance_zu_4_6_3_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_Anhang1_AckOfAcceptance_zu_4_6_5_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_Anhang1_AckOfAcceptance_zu_Z1_3_3_3_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_Anhang1_AckOfAcceptance_zu_Z1_3_3_5_1p1.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_Anhang1_Model Error Report_zu_3_2_1_3_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_Anhang1_Model Error Report_zu_4_6_3_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_Anhang1_Model Error Report_zu_Z1_3_3_3_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_Anhang1_Model Error Report_zu_Z1_3_3_5_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_Anhang2_Prozessabbruch_Ablehnung_zu_3_2_1_4_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_Anhang2_Prozessabbruch_Anfrage_zu_3_2_1_4_1p2.xml" HomeFolder="Yes"/>
+		<File FilePath="Beispiel_Anhang2_Prozessabbruch_Bestätigung_zu_3_2_1_4_1p2.xml" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="XSL Files" ExtStr="xsl;xslt"/>
+	<Folder FolderName="HTML Files" ExtStr="html;htm;xhtml;asp"/>
+	<Folder FolderName="DTD/Schemas" ExtStr="dtd;dcd;xdr;biz;xsd">
+		<Folder FolderName="Codes">
+			<Folder FolderName="Codes indirectly used">
+				<File FilePath="IANA_CharacterSetCode_20061207.xsd" HomeFolder="Yes"/>
+				<File FilePath="ISO_CountryCode_20060926.xsd" HomeFolder="Yes"/>
+				<File FilePath="ISO_CurrencyCode_20070308.xsd" HomeFolder="Yes"/>
+				<File FilePath="UNECE_AgencyIdentificationCode_D06B.xsd" HomeFolder="Yes"/>
+				<File FilePath="UNECE_CharacterSetEncodingCode_20061205.xsd" HomeFolder="Yes"/>
+				<File FilePath="UNECE_MeasurementUnitCommonCode_4.xsd" HomeFolder="Yes"/>
+			</Folder>
+			<File FilePath="ebIX_BusinessDomainCode_10.xsd" HomeFolder="Yes"/>
+			<File FilePath="ebIX_BusinessReasonCode_10.xsd" HomeFolder="Yes"/>
+			<File FilePath="ebIX_BusinessReasonCode_11.xsd" HomeFolder="Yes"/>
+			<File FilePath="ebIX_BusinessRoleCode_10.xsd" HomeFolder="Yes"/>
+			<File FilePath="ebIX_BusinessSectorCode_10.xsd" HomeFolder="Yes"/>
+			<File FilePath="ebIX_DocumentAcceptanceReasonCode_11.xsd" HomeFolder="Yes"/>
+			<File FilePath="ebIX_DocumentAcceptanceStatusCode_10.xsd" HomeFolder="Yes"/>
+			<File FilePath="ebIX_DocumentFunctionCode_10.xsd" HomeFolder="Yes"/>
+			<File FilePath="ebIX_DocumentTypeCode_11.xsd" HomeFolder="Yes"/>
+			<File FilePath="ebIX_EnergyPriceTypeCode_10.xsd" HomeFolder="Yes"/>
+			<File FilePath="ebIX_EnergyProductIdentificationCode_10.xsd" HomeFolder="Yes"/>
+			<File FilePath="ebIX_EnergyQuantityQualityCode_10.xsd" HomeFolder="Yes"/>
+			<File FilePath="ebIX_MeteringMethodCode_10.xsd" HomeFolder="Yes"/>
+			<File FilePath="ebIX_MeteringPointTypeCode_10.xsd" HomeFolder="Yes"/>
+			<File FilePath="ebIX_MeterReadingOriginCode_10.xsd" HomeFolder="Yes"/>
+			<File FilePath="ebIX_MeterTimeFrameCode_10.xsd" HomeFolder="Yes"/>
+			<File FilePath="ebIX_SchemeIdentificationCode_10.xsd" HomeFolder="Yes"/>
+			<File FilePath="ebIX_SettlementMethodCode_10.xsd" HomeFolder="Yes"/>
+			<File FilePath="ebIX_TemporaryBusinessRoleCode_11.xsd" HomeFolder="Yes"/>
+			<File FilePath="ebIX_VersionIdentifier_10.xsd" HomeFolder="Yes"/>
+			<File FilePath="ETSO_BusinessReasonCode_00.xsd" HomeFolder="Yes"/>
+			<File FilePath="ETSO_BusinessTypeCode_00.xsd" HomeFolder="Yes"/>
+			<File FilePath="ETSO_ProcessTypeCode_00.xsd" HomeFolder="Yes"/>
+			<File FilePath="IANA_CharacterSetCode_20050128.xsd" HomeFolder="Yes"/>
+			<File FilePath="IANA_MIMEMediaType_20060110.xsd" HomeFolder="Yes"/>
+			<File FilePath="ISO_CountryCode_20040914.xsd" HomeFolder="Yes"/>
+			<File FilePath="ISO_CurrencyCode_2001.xsd" HomeFolder="Yes"/>
+			<File FilePath="UNECE_AgencyIdentificationCode_D05A.xsd" HomeFolder="Yes"/>
+			<File FilePath="UNECE_BusinessRoleCode_D05A.xsd" HomeFolder="Yes"/>
+			<File FilePath="UNECE_BusinessRoleCode_D05A_11.xsd" HomeFolder="Yes"/>
+			<File FilePath="UNECE_CharacterSetEncodingCode_2005.xsd" HomeFolder="Yes"/>
+			<File FilePath="UNECE_DocumentTypeCode_00.xsd" HomeFolder="Yes"/>
+			<File FilePath="UNECE_MeasurementUnitCommonCode_3.xsd" HomeFolder="Yes"/>
+			<File FilePath="VSE_BusinessReasonCode_12.xsd" HomeFolder="Yes"/>
+			<File FilePath="VSE_BusinessRoleCode_10.xsd" HomeFolder="Yes"/>
+			<File FilePath="VSE_DocumentAcceptanceReasonCode_10.xsd" HomeFolder="Yes"/>
+			<File FilePath="VSE_DocumentTypeCode_11.xsd" HomeFolder="Yes"/>
+			<File FilePath="VSE_GridBillingMethodTypeCode_10.xsd" HomeFolder="Yes"/>
+			<File FilePath="VSE_PhysicalStatusTypeCode_10.xsd" HomeFolder="Yes"/>
+		</Folder>
+		<Folder FolderName="Documents Pre-Instantiated">
+			<File FilePath="AggregatedMeteredData_1p1.xsd" HomeFolder="Yes"/>
+			<File FilePath="AggregationCriteria_1p1.xsd" HomeFolder="Yes"/>
+			<File FilePath="CancellationRequestToMPA_1p1.xsd" HomeFolder="Yes"/>
+			<File FilePath="CancellationResponseFromMPA_1p1.xsd" HomeFolder="Yes"/>
+			<File FilePath="ImbalanceData_1p1.xsd" HomeFolder="Yes"/>
+			<File FilePath="MasterdataMeteringPoint_1p0.xsd" HomeFolder="Yes"/>
+			<File FilePath="MasterdataPartyConnectedToGrid_1p0.xsd" HomeFolder="Yes"/>
+			<File FilePath="MasterdataSupplyContract_1p0.xsd" HomeFolder="Yes"/>
+			<File FilePath="NotificationFromMPA_1p1.xsd" HomeFolder="Yes"/>
+			<File FilePath="QueryInformation_1p0.xsd" HomeFolder="Yes"/>
+			<File FilePath="RequestToMPA_1p1.xsd" HomeFolder="Yes"/>
+			<File FilePath="ResponseFromMPA_Confirm_1p1.xsd" HomeFolder="Yes"/>
+			<File FilePath="ResponseFromMPA_Reject_1p1.xsd" HomeFolder="Yes"/>
+			<File FilePath="ValidatedMeteredData_1p4.xsd" HomeFolder="Yes"/>
+		</Folder>
+		<Folder FolderName="CC">
+			<Folder FolderName="CC Indirectly used">
+				<File FilePath="UnqualifiedDataType_2p0.xsd" HomeFolder="Yes"/>
+			</Folder>
+			<File FilePath="AcknowledgementOfAcceptanceCoreComponents_1p1.xsd" HomeFolder="Yes"/>
+			<File FilePath="AggregatedMeteredData_CoreComponents_1p1.xsd" HomeFolder="Yes"/>
+			<File FilePath="AggregationCriteria_CoreComponents_1p1.xsd" HomeFolder="Yes"/>
+			<File FilePath="CancellationRequestToMPA_CoreComponents_1p1.xsd" HomeFolder="Yes"/>
+			<File FilePath="CancellationResponseFromMPA_CoreComponents_1p1.xsd" HomeFolder="Yes"/>
+			<File FilePath="ImbalanceData_CoreComponents_1p1.xsd" HomeFolder="Yes"/>
+			<File FilePath="MasterdataMeteringPoint_CoreComponents_1p0.xsd" HomeFolder="Yes"/>
+			<File FilePath="MasterdataPartyConnectedToGrid_CoreComponents_1p0.xsd" HomeFolder="Yes"/>
+			<File FilePath="MasterdataSupplyContract_CoreComponents_1p0.xsd" HomeFolder="Yes"/>
+			<File FilePath="ModelErrorReportCoreComponents_1p2.xsd" HomeFolder="Yes"/>
+			<File FilePath="NotificationFromMPA_CoreComponents_1p1.xsd" HomeFolder="Yes"/>
+			<File FilePath="QualifiedDataType_2p0.xsd" HomeFolder="Yes"/>
+			<File FilePath="QueryInformation_CoreComponents_1p0.xsd" HomeFolder="Yes"/>
+			<File FilePath="RequestToMPA_CoreComponents_1p1.xsd" HomeFolder="Yes"/>
+			<File FilePath="ResponseFromMPA_Confirm_CoreComponents_1p1.xsd" HomeFolder="Yes"/>
+			<File FilePath="ResponseFromMPA_Reject_CoreComponents_1p1.xsd" HomeFolder="Yes"/>
+			<File FilePath="ReusableAggregateBusinessInformationEntity_2p0.xsd" HomeFolder="Yes"/>
+			<File FilePath="UnqualifiedDataType_3p0.xsd" HomeFolder="Yes"/>
+			<File FilePath="ValidatedMeteredData_CoreComponents_1p4.xsd" HomeFolder="Yes"/>
+		</Folder>
+		<Folder FolderName="Management">
+			<File FilePath="CoreComponentType_2p0.xsd" HomeFolder="Yes"/>
+		</Folder>
+		<Folder FolderName="Documents Generic">
+			<File FilePath="AcknowledgementOfAcceptance_1p1.xsd" HomeFolder="Yes"/>
+			<File FilePath="ModelErrorReport_1p2.xsd" HomeFolder="Yes"/>
+		</Folder>
+		<Folder FolderName="eGovernment (eCH) Documents">
+			<File FilePath="eCH-0010-6-0.xsd" HomeFolder="Yes"/>
+			<File FilePath="eCH-0044-4-1.xsd" HomeFolder="Yes"/>
+			<File FilePath="eCH-0046-3-0.xsd" HomeFolder="Yes"/>
+		</Folder>
+		<Folder FolderName="Additional"/>
+	</Folder>
+	<Folder FolderName="Entities" ExtStr="ent"/>
+</Project>

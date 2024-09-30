@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2015 sp2 (x64) (http://www.altova.com) von ICS (swissgrid ag) bearbeitet -->
+<!--XML-Beispieldatei von XMLSpy generiert v2015 sp2 (x64) (http://www.altova.com)-->
+<rsm:MasterdataSupplyContract_10 xmlns:rsm="http://www.strom.ch" xmlns:eCH-0010="http://www.ech.ch/xmlns/eCH-0010/6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.strom.ch MasterdataSupplyContract_1p0.xsd">
+	<rsm:MasterdataSupplyContract_HeaderInformation>
+		<rsm:HeaderVersion>1.0</rsm:HeaderVersion>
+		<rsm:Sender>
+			<rsm:ID>
+				<rsm:EICID schemeAgencyID="305">12X-PARTY-G-000L</rsm:EICID>
+			</rsm:ID>
+			<rsm:Role>DDQ</rsm:Role>
+		</rsm:Sender>
+		<rsm:Receiver>
+			<rsm:ID>
+				<rsm:EICID schemeAgencyID="305">12X-PARTY-A-000K</rsm:EICID>
+			</rsm:ID>
+			<rsm:Role>DDQ</rsm:Role>
+		</rsm:Receiver>
+		<rsm:InstanceDocument>
+			<rsm:DictionaryAgencyID>260</rsm:DictionaryAgencyID>
+			<rsm:VersionID listAgencyID="260">2007B</rsm:VersionID>
+			<rsm:DocumentID>DID_Beispiel_3_5_6_x_QMPSw_21_11a</rsm:DocumentID>
+			<rsm:DocumentType>
+				<rsm:VSENationalCode>C04</rsm:VSENationalCode>
+			</rsm:DocumentType>
+			<rsm:Creation>2015-05-06T09:30:47Z</rsm:Creation>
+			<rsm:Status>9</rsm:Status>
+		</rsm:InstanceDocument>
+		<rsm:BusinessScopeProcess>
+			<rsm:BusinessReasonType codeListAgency="260">
+				<rsm:VSENationalCode>C21</rsm:VSENationalCode>
+			</rsm:BusinessReasonType>
+			<rsm:BusinessDomainType listAgencyID="260">E01</rsm:BusinessDomainType>
+			<rsm:BusinessSectorType>23</rsm:BusinessSectorType>
+			<rsm:BusinessService>
+				<rsm:ServiceTransaction isIntelligibleCheckRequired="true"/>
+			</rsm:BusinessService>
+		</rsm:BusinessScopeProcess>
+	</rsm:MasterdataSupplyContract_HeaderInformation>
+	<rsm:Instance>
+		<rsm:DocumentID>DID_Beispiel_3_5_6_x_QMPSw_21_11a</rsm:DocumentID>
+		<rsm:RequestedTransaction>
+			<rsm:Status>39</rsm:Status>
+		</rsm:RequestedTransaction>
+		<rsm:ReferenceToRequestingDocumentID>DID_Beispiel_3_5_6_x_QMPSw_20_11b</rsm:ReferenceToRequestingDocumentID>
+		<rsm:MeteringPoint>
+			<rsm:VSENationalID schemeID="VSE" schemeAgencyID="260">CH9999901234500000000000000000001</rsm:VSENationalID>
+			<rsm:ContractTerminationInformation>
+				<rsm:ContractTerminationDate>2018-01-01</rsm:ContractTerminationDate>
+			</rsm:ContractTerminationInformation>
+		</rsm:MeteringPoint>
+	</rsm:Instance>
+	<rsm:Instance>
+		<rsm:DocumentID>DID_Beispiel_3_5_6_x_QMPSw_21_11b</rsm:DocumentID>
+		<rsm:RequestedTransaction>
+			<rsm:Status>39</rsm:Status>
+		</rsm:RequestedTransaction>
+		<rsm:ReferenceToRequestingDocumentID>DID_Beispiel_3_5_6_x_QMPSw_20_11c</rsm:ReferenceToRequestingDocumentID>
+		<rsm:MeteringPoint>
+			<rsm:VSENationalID schemeID="VSE" schemeAgencyID="260">CH9999901234500000000000000001001</rsm:VSENationalID>
+			<rsm:ContractTerminationInformation>
+				<rsm:ContractTerminationTimeOfNotice>
+					<rsm:Resolution>3</rsm:Resolution>
+					<rsm:Unit>MON</rsm:Unit>
+				</rsm:ContractTerminationTimeOfNotice>
+			</rsm:ContractTerminationInformation>
+		</rsm:MeteringPoint>
+	</rsm:Instance>
+</rsm:MasterdataSupplyContract_10>

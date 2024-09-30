@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:AggregatedMeteredData_11 xsi:schemaLocation="http://www.strom.ch AggregatedMeteredData_1p1.xsd" xmlns:rsm="http://www.strom.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<rsm:AggregatedMeteredData_HeaderInformation>
+		<rsm:HeaderVersion>1.0</rsm:HeaderVersion>
+		<rsm:Sender>
+			<rsm:ID>
+				<rsm:EICID schemeAgencyID="305">12X-PARTY-A-000K</rsm:EICID>
+			</rsm:ID>
+			<rsm:Role>DEA</rsm:Role>
+		</rsm:Sender>
+		<rsm:Receiver>
+			<rsm:ID>
+				<rsm:EICID schemeAgencyID="305">12X-PARTY-B-000E</rsm:EICID>
+			</rsm:ID>
+			<rsm:Role>Z04</rsm:Role>
+		</rsm:Receiver>
+		<rsm:InstanceDocument>
+			<rsm:DictionaryAgencyID>260</rsm:DictionaryAgencyID>
+			<rsm:VersionID listAgencyID="260">2007B</rsm:VersionID>
+			<rsm:DocumentID>DID_Beispiel_3_5_9_x_QMPVAD_21_11a</rsm:DocumentID>
+			<rsm:DocumentType listAgencyID="260">
+				<rsm:ebIXCode>E31</rsm:ebIXCode>
+			</rsm:DocumentType>
+			<rsm:Creation>2008-06-07T14:20:05Z</rsm:Creation>
+			<rsm:Status>9</rsm:Status>
+		</rsm:InstanceDocument>
+		<rsm:BusinessScopeProcess>
+			<rsm:BusinessReasonType codeListAgency="260">
+				<rsm:ebIXCode>E44</rsm:ebIXCode>
+			</rsm:BusinessReasonType>
+			<rsm:BusinessDomainType listAgencyID="260">E02</rsm:BusinessDomainType>
+			<rsm:BusinessSectorType>23</rsm:BusinessSectorType>
+			<rsm:ReportPeriod>
+				<rsm:StartDateTime>2008-06-05T22:00:00Z</rsm:StartDateTime>
+				<rsm:EndDateTime>2008-06-06T22:00:00Z</rsm:EndDateTime>
+			</rsm:ReportPeriod>
+			<rsm:BusinessService>
+				<rsm:ServiceTransaction isIntelligibleCheckRequired="true"/>
+			</rsm:BusinessService>
+		</rsm:BusinessScopeProcess>
+	</rsm:AggregatedMeteredData_HeaderInformation>
+	<rsm:MeteringData>
+		<rsm:DocumentID>DID_Beispiel_3_5_8_x_QMPVMD_21_11</rsm:DocumentID>
+		<rsm:RequestedTransaction>
+			<rsm:Status>41</rsm:Status>
+			<rsm:Reason>E10</rsm:Reason>
+		</rsm:RequestedTransaction>
+		<rsm:ReferenceToRequestingDocumentID>DID_Beispiel_3_5_8_x_QMPVMD_20_11b</rsm:ReferenceToRequestingDocumentID>
+	</rsm:MeteringData>
+</rsm:AggregatedMeteredData_11>

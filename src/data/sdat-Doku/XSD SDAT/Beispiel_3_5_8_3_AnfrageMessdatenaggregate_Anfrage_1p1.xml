@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML-Beispieldatei von XMLSpy generiert v2015 sp2 (x64) (http://www.altova.com)-->
+<rsm:QueryInformation_10 xmlns:rsm="http://www.strom.ch" xmlns:eCH-0010="http://www.ech.ch/xmlns/eCH-0010/6" xmlns:eCH-0044="http://www.ech.ch/xmlns/eCH-0044/4" xmlns:eCH-0046="http://www.ech.ch/xmlns/eCH-0046/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.strom.ch QueryInformation_1p0.xsd">
+	<rsm:QueryInformation_HeaderInformation>
+		<rsm:HeaderVersion>1.0</rsm:HeaderVersion>
+		<rsm:Sender>
+			<rsm:ID>
+				<rsm:EICID schemeAgencyID="305">12X-PARTY-B-0008</rsm:EICID>
+			</rsm:ID>
+			<rsm:Role>Z04</rsm:Role>
+		</rsm:Sender>
+		<rsm:Receiver>
+			<rsm:ID>
+				<rsm:EICID schemeAgencyID="305">12X-PARTY-A-000K</rsm:EICID>
+			</rsm:ID>
+			<rsm:Role>DEA</rsm:Role>
+		</rsm:Receiver>
+		<rsm:InstanceDocument>
+			<rsm:DictionaryAgencyID>260</rsm:DictionaryAgencyID>
+			<rsm:VersionID listAgencyID="260">2007B</rsm:VersionID>
+			<rsm:DocumentID>DID_Beispiel_3_5_9_x_QMPVAD_20_11a</rsm:DocumentID>
+			<rsm:DocumentType>
+				<rsm:VSENationalCode>C03</rsm:VSENationalCode>
+			</rsm:DocumentType>
+			<rsm:Creation>2015-05-06T09:20:47Z</rsm:Creation>
+			<rsm:Status>9</rsm:Status>
+		</rsm:InstanceDocument>
+		<rsm:BusinessScopeProcess>
+			<rsm:BusinessReasonType codeListAgency="260">
+				<rsm:VSENationalCode>C24</rsm:VSENationalCode>
+			</rsm:BusinessReasonType>
+			<rsm:BusinessDomainType listAgencyID="260">E02</rsm:BusinessDomainType>
+			<rsm:BusinessSectorType>23</rsm:BusinessSectorType>
+			<rsm:BusinessService>
+				<rsm:ServiceTransaction isIntelligibleCheckRequired="true"/>
+			</rsm:BusinessService>
+		</rsm:BusinessScopeProcess>
+	</rsm:QueryInformation_HeaderInformation>
+	<rsm:Instance>
+		<rsm:DocumentID>DID_Beispiel_3_5_9_x_QMPVAD_20_11b</rsm:DocumentID>
+		<rsm:MeteringData>
+			<rsm:Interval>
+				<rsm:StartDateTime>2015-06-02T22:00:00Z</rsm:StartDateTime>
+				<rsm:EndDateTime>2015-06-03T22:00:00Z</rsm:EndDateTime>
+			</rsm:Interval>
+			<rsm:Resolution>
+				<rsm:Resolution>15</rsm:Resolution>
+				<rsm:Unit>MIN</rsm:Unit>
+			</rsm:Resolution>	
+		</rsm:MeteringData>		
+		<rsm:AggregationCriteria>
+			<rsm:FlowCharacteristic listAgencyID="260">E17</rsm:FlowCharacteristic>
+			<rsm:SettlementMethodCharacteristic listAgencyID="260" >E02</rsm:SettlementMethodCharacteristic>
+			<rsm:BalanceResponsible>
+				<rsm:EICID schemeAgencyID="305">12X-PARTY-K-000Y</rsm:EICID>
+			</rsm:BalanceResponsible>
+		</rsm:AggregationCriteria>
+		<rsm:MeteringGridArea>
+			<rsm:EICID schemeAgencyID="305">12Y-AREA-A-00009</rsm:EICID>
+		</rsm:MeteringGridArea>
+		<rsm:Product>
+			<rsm:ID schemeAgencyID="9">8716867000030</rsm:ID>
+			<rsm:MeasureUnit>KWH</rsm:MeasureUnit>
+		</rsm:Product>
+	</rsm:Instance>
+</rsm:QueryInformation_10>

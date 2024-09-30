@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:ResponseFromMPA_Confirm_11 xsi:schemaLocation="http://www.strom.ch ResponseFromMPA_Confirm_1p1.xsd" xmlns:rsm="http://www.strom.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<rsm:ResponseFromMPA_Confirm_HeaderInformation>
+		<rsm:HeaderVersion>1.0</rsm:HeaderVersion>
+		<rsm:Sender>
+			<rsm:ID>
+				<rsm:EICID schemeAgencyID="305">12X-PARTY-B-000E</rsm:EICID>
+			</rsm:ID>
+			<rsm:Role>DDZ</rsm:Role>
+		</rsm:Sender>
+		<rsm:Receiver>
+			<rsm:ID>
+				<rsm:EICID schemeAgencyID="305">12X-PARTY-A-000K</rsm:EICID>
+			</rsm:ID>
+			<rsm:Role>DDQ</rsm:Role>
+		</rsm:Receiver>
+		<rsm:InstanceDocument>
+			<rsm:DictionaryAgencyID>260</rsm:DictionaryAgencyID>
+			<rsm:VersionID listAgencyID="260">2007B</rsm:VersionID>
+			<rsm:DocumentID>DocID_Beispiel_3_3_2_x_EndAusz_21_a</rsm:DocumentID>
+			<rsm:DocumentType>
+				<rsm:CefactCode>414</rsm:CefactCode>
+			</rsm:DocumentType>
+			<rsm:Creation>2008-06-13T13:13:13Z</rsm:Creation>
+			<rsm:Status>9</rsm:Status>
+		</rsm:InstanceDocument>
+		<rsm:BusinessScopeProcess>
+			<rsm:BusinessReasonType codeListAgency="260">
+				<rsm:ebIXCode>E93</rsm:ebIXCode>
+			</rsm:BusinessReasonType>
+			<rsm:BusinessDomainType listAgencyID="260">E01</rsm:BusinessDomainType>
+			<rsm:BusinessSectorType>23</rsm:BusinessSectorType>
+			<rsm:BusinessService>
+				<rsm:ServiceTransaction isIntelligibleCheckRequired="true"/>
+			</rsm:BusinessService>
+		</rsm:BusinessScopeProcess>
+	</rsm:ResponseFromMPA_Confirm_HeaderInformation>
+	<rsm:Switch>
+		<rsm:DocumentID>DID_Beispiel_3_3_2_x_EndAusz_21_11b</rsm:DocumentID>
+		<rsm:MeteringPoint>
+			<rsm:VSENationalID schemeID="VSE" schemeAgencyID="260">CH9999901234500000000000000000002</rsm:VSENationalID>
+			<rsm:SwitchDate>
+				<rsm:EndDate>2008-07-14</rsm:EndDate>
+			</rsm:SwitchDate>
+		</rsm:MeteringPoint>
+		<rsm:RequestedTransaction>
+			<rsm:Status>39</rsm:Status>
+		</rsm:RequestedTransaction>
+		<rsm:ReferenceToRequestingDocumentID>DID_Beispiel_3_3_2_x_EndAusz_10_11c</rsm:ReferenceToRequestingDocumentID>
+		<rsm:BusinessProcessID>BusPID_Beispiel_3_3_2_4_EndAu_11_1a</rsm:BusinessProcessID>
+	</rsm:Switch>
+	<rsm:Switch>
+		<rsm:DocumentID>DID_Beispiel_3_3_2_x_EndAusz_21_11c</rsm:DocumentID>
+		<rsm:MeteringPoint>
+			<rsm:VSENationalID schemeID="VSE" schemeAgencyID="260">CH9999901234500000000000000000001</rsm:VSENationalID>
+			<rsm:SwitchDate>
+				<rsm:EndDate>2008-03-13</rsm:EndDate>
+			</rsm:SwitchDate>
+		</rsm:MeteringPoint>
+		<rsm:RequestedTransaction>
+			<rsm:Status>39</rsm:Status>
+		</rsm:RequestedTransaction>
+		<rsm:ReferenceToRequestingDocumentID>DID_Beispiel_3_3_2_x_EndAusz_10_11b</rsm:ReferenceToRequestingDocumentID>
+		<rsm:BusinessProcessID>BusPID_Beispiel_3_3_2_4_EndAu_11_1b</rsm:BusinessProcessID>
+	</rsm:Switch>
+</rsm:ResponseFromMPA_Confirm_11>

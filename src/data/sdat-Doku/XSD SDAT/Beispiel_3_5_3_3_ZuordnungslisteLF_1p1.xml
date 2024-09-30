@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2015 sp2 (x64) (http://www.altova.com) von ICS (swissgrid ag) bearbeitet -->
+<rsm:AggregationCriteria_11 xsi:schemaLocation="http://www.strom.ch AggregationCriteria_1p1.xsd" xmlns:rsm="http://www.strom.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<rsm:AggregationCriteria_HeaderInformation>
+		<rsm:HeaderVersion>1.0</rsm:HeaderVersion>
+		<rsm:Sender>
+			<rsm:ID>
+				<rsm:EICID schemeAgencyID="305">12X-PARTY-A-000K</rsm:EICID>
+			</rsm:ID>
+			<rsm:Role>DEA</rsm:Role>
+		</rsm:Sender>
+		<rsm:Receiver>
+			<rsm:ID>
+				<rsm:EICID schemeAgencyID="305">12X-PARTY-B-000E</rsm:EICID>
+			</rsm:ID>
+			<rsm:Role>DDQ</rsm:Role>
+		</rsm:Receiver>
+		<rsm:InstanceDocument>
+			<rsm:DictionaryAgencyID>260</rsm:DictionaryAgencyID>
+			<rsm:VersionID listAgencyID="260">2007B</rsm:VersionID>
+			<rsm:DocumentID>DID_Beispiel_3_5_4_x_StammLi_10_11a</rsm:DocumentID>
+			<rsm:DocumentType listID="VSE" listAgencyID="260">
+				<rsm:VSENationalCode>C02</rsm:VSENationalCode>
+			</rsm:DocumentType>
+			<rsm:Creation>2015-05-02T13:07:05Z</rsm:Creation>
+			<rsm:Status>9</rsm:Status>
+		</rsm:InstanceDocument>
+		<rsm:BusinessScopeProcess>
+			<rsm:BusinessReasonType codeListAgency="260" codeListID="VSE">
+				<rsm:VSENationalCode>C10</rsm:VSENationalCode>
+			</rsm:BusinessReasonType>
+			<rsm:BusinessDomainType listAgencyID="260">E01</rsm:BusinessDomainType>
+			<rsm:BusinessSectorType>23</rsm:BusinessSectorType>
+			<rsm:ReportPeriod>
+				<rsm:StartDateTime>2008-03-31T23:00:00Z</rsm:StartDateTime>
+				<rsm:EndDateTime>2008-04-30T22:00:00Z</rsm:EndDateTime>
+			</rsm:ReportPeriod>
+			<rsm:BusinessService>
+				<rsm:ServiceTransaction isIntelligibleCheckRequired="true"/>
+			</rsm:BusinessService>
+		</rsm:BusinessScopeProcess>
+	</rsm:AggregationCriteria_HeaderInformation>
+	<rsm:AreaCriteriaInformation>
+		<rsm:DocumentID>DID_Beispiel_3_5_4_x_StammLi_10_11b</rsm:DocumentID>
+		<rsm:MeteringGridArea>
+			<rsm:EICID schemeAgencyID="305">12Y-AREA-A-00009</rsm:EICID>
+			<rsm:MeteringPoint>
+				<rsm:VSENationalID schemeID="VSE" schemeAgencyID="260">CH9999901234500000000000000000001</rsm:VSENationalID>
+				<rsm:DetailPeriod>
+					<rsm:StartDate>2015-04-01</rsm:StartDate>
+					<rsm:EndDate>2015-04-07</rsm:EndDate>
+					<rsm:BalanceResponsible>
+						<rsm:EICID schemeAgencyID="305">12X-PARTY-K-000Y</rsm:EICID>
+					</rsm:BalanceResponsible>
+					<rsm:BalanceSupplier>
+						<rsm:EICID schemeAgencyID="305">12X-PARTY-B-000E</rsm:EICID>
+					</rsm:BalanceSupplier>
+					<rsm:AncillaryServiceProvider>
+						<rsm:EICID schemeAgencyID="305">12X-PARTY-D-0002</rsm:EICID>
+					</rsm:AncillaryServiceProvider>
+					<rsm:AncillaryServiceProvider>
+						<rsm:EICID schemeAgencyID="305">12X-PARTY-E-000X</rsm:EICID>
+					</rsm:AncillaryServiceProvider>
+				</rsm:DetailPeriod>
+				<rsm:DetailPeriod>
+					<rsm:StartDate>2015-04-24</rsm:StartDate>
+					<rsm:EndDate>2015-05-01</rsm:EndDate>
+					<rsm:BalanceResponsible>
+						<rsm:EICID schemeAgencyID="305">12X-PARTY-L-000S</rsm:EICID>
+					</rsm:BalanceResponsible>
+					<rsm:BalanceSupplier>
+						<rsm:EICID schemeAgencyID="305">12X-PARTY-B-000E</rsm:EICID>
+					</rsm:BalanceSupplier>
+					<rsm:AncillaryServiceProvider>
+						<rsm:EICID schemeAgencyID="305">12X-PARTY-D-0002</rsm:EICID>
+					</rsm:AncillaryServiceProvider>
+					<rsm:AncillaryServiceProvider>
+						<rsm:EICID schemeAgencyID="305">12X-PARTY-E-000X</rsm:EICID>
+					</rsm:AncillaryServiceProvider>
+				</rsm:DetailPeriod>
+			</rsm:MeteringPoint>
+			<rsm:MeteringPoint>
+				<rsm:VSENationalID schemeID="VSE" schemeAgencyID="260">CH9999901234500000000000000000002</rsm:VSENationalID>
+				<rsm:DetailPeriod>
+					<rsm:StartDate>2015-04-01</rsm:StartDate>
+					<rsm:EndDate>2015-05-01</rsm:EndDate>
+					<rsm:BalanceResponsible>
+						<rsm:EICID schemeAgencyID="305">12X-PARTY-K-000Y</rsm:EICID>
+					</rsm:BalanceResponsible>
+					<rsm:BalanceSupplier>
+						<rsm:EICID schemeAgencyID="305">12X-PARTY-B-000E</rsm:EICID>
+					</rsm:BalanceSupplier>
+				</rsm:DetailPeriod>
+			</rsm:MeteringPoint>
+		</rsm:MeteringGridArea>
+	</rsm:AreaCriteriaInformation>
+	<rsm:AreaCriteriaInformation>
+		<rsm:DocumentID>DID_Beispiel_3_5_4_x_StammLi_10_11c</rsm:DocumentID>
+		<rsm:MeteringGridArea>
+			<rsm:EICID schemeAgencyID="305">12Y-AREA-B-00002</rsm:EICID>
+			<rsm:MeteringPoint>
+				<rsm:VSENationalID schemeID="VSE" schemeAgencyID="260">CH9999901234500000000000000000003</rsm:VSENationalID>
+				<rsm:DetailPeriod>
+					<rsm:StartDate>2015-04-01</rsm:StartDate>
+					<rsm:EndDate>2015-04-14</rsm:EndDate>
+					<rsm:BalanceResponsible>
+						<rsm:EICID schemeAgencyID="305">12X-PARTY-K-000Y</rsm:EICID>
+					</rsm:BalanceResponsible>
+					<rsm:BalanceSupplier>
+						<rsm:EICID schemeAgencyID="305">12X-PARTY-B-000E</rsm:EICID>
+					</rsm:BalanceSupplier>
+				</rsm:DetailPeriod>
+			</rsm:MeteringPoint>
+		</rsm:MeteringGridArea>
+	</rsm:AreaCriteriaInformation>
+</rsm:AggregationCriteria_11>

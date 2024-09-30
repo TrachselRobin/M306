@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:AcknowledgementOfAcceptance_11 xsi:schemaLocation="http://www.strom.ch AcknowledgementOfAcceptance_1p1.xsd" xmlns:rsm="http://www.strom.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<rsm:AcknowledgementOfAcceptance_HeaderInformation>
+		<rsm:HeaderVersion>1.0</rsm:HeaderVersion>
+		<rsm:Sender>
+			<rsm:ID>
+				<rsm:EICID schemeAgencyID="305">12X-PARTY-B-000E</rsm:EICID>
+			</rsm:ID>
+			<rsm:Role>DEA</rsm:Role>
+		</rsm:Sender>
+		<rsm:Receiver>
+			<rsm:ID>
+				<rsm:EICID schemeAgencyID="305">12X-PARTY-A-000K</rsm:EICID>
+			</rsm:ID>
+			<rsm:Role>MDR</rsm:Role>
+		</rsm:Receiver>
+		<rsm:InstanceDocument>
+			<rsm:DictionaryAgencyID>260</rsm:DictionaryAgencyID>
+			<rsm:VersionID listAgencyID="260">2007B</rsm:VersionID>
+			<rsm:DocumentID>DID_AckOfAcc_4_6_x_BGAbrBGV__40_11a</rsm:DocumentID>
+			<rsm:DocumentType>
+				<rsm:CefactCode>312</rsm:CefactCode>
+			</rsm:DocumentType>
+			<rsm:Creation>2008-06-10T11:24:34Z</rsm:Creation>
+			<rsm:Status>9</rsm:Status>
+		</rsm:InstanceDocument>
+		<rsm:BusinessScopeProcess>
+			<rsm:BusinessDomainType listAgencyID="260">E02</rsm:BusinessDomainType>
+			<rsm:BusinessSectorType>23</rsm:BusinessSectorType>
+			<rsm:BusinessService>
+				<rsm:ServiceTransaction isIntelligibleCheckRequired="false"/>
+			</rsm:BusinessService>
+		</rsm:BusinessScopeProcess>
+	</rsm:AcknowledgementOfAcceptance_HeaderInformation>
+	<rsm:InstanceDocumentReference>
+		<rsm:DocumentID>DID_Beispiel_4_6_x_BGAbrBGV__40_11a</rsm:DocumentID>
+		<rsm:DocumentType listAgencyID="260">
+			<rsm:ebIXCode>E44</rsm:ebIXCode>
+		</rsm:DocumentType>
+		<rsm:Creation>2008-06-10T11:20:05Z</rsm:Creation>
+		<rsm:OriginalDocument>
+			<rsm:Status>39</rsm:Status>
+		</rsm:OriginalDocument>
+	</rsm:InstanceDocumentReference>
+</rsm:AcknowledgementOfAcceptance_11>

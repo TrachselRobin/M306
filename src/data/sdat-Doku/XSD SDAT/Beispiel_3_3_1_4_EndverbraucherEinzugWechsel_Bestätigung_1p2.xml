@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2015 sp2 (x64) (http://www.altova.com) von ICS (swissgrid ag) bearbeitet -->
+<rsm:ResponseFromMPA_Confirm_11 xsi:schemaLocation="http://www.strom.ch ResponseFromMPA_Confirm_1p1.xsd" xmlns:rsm="http://www.strom.ch" xmlns:eCH-0010="http://www.ech.ch/xmlns/eCH-0010/6" xmlns:eCH-0044="http://www.ech.ch/xmlns/eCH-0044/4" xmlns:eCH-0046="http://www.ech.ch/xmlns/eCH-0046/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<rsm:ResponseFromMPA_Confirm_HeaderInformation>
+		<rsm:HeaderVersion>1.0</rsm:HeaderVersion>
+		<rsm:Sender>
+			<rsm:ID>
+				<rsm:EICID schemeAgencyID="305">12X-PARTY-B-000E</rsm:EICID>
+			</rsm:ID>
+			<rsm:Role>DDZ</rsm:Role>
+		</rsm:Sender>
+		<rsm:Receiver>
+			<rsm:ID>
+				<rsm:EICID schemeAgencyID="305">12X-PARTY-A-000K</rsm:EICID>
+			</rsm:ID>
+			<rsm:Role>DDQ</rsm:Role>
+		</rsm:Receiver>
+		<rsm:InstanceDocument>
+			<rsm:DictionaryAgencyID>260</rsm:DictionaryAgencyID>
+			<rsm:VersionID listAgencyID="260">2007B</rsm:VersionID>
+			<rsm:DocumentID>DID_Beispiel_3_3_1_x_EndEinW_21_11a</rsm:DocumentID>
+			<rsm:DocumentType>
+				<rsm:CefactCode>414</rsm:CefactCode>
+			</rsm:DocumentType>
+			<rsm:Creation>2008-06-13T13:13:13Z</rsm:Creation>
+			<rsm:Status>9</rsm:Status>
+		</rsm:InstanceDocument>
+		<rsm:BusinessScopeProcess>
+			<rsm:BusinessReasonType codeListAgency="260">
+				<rsm:ebIXCode>E92</rsm:ebIXCode>
+			</rsm:BusinessReasonType>
+			<rsm:BusinessDomainType listAgencyID="260">E01</rsm:BusinessDomainType>
+			<rsm:BusinessSectorType>23</rsm:BusinessSectorType>
+			<rsm:BusinessService>
+				<rsm:ServiceTransaction isIntelligibleCheckRequired="true"/>
+			</rsm:BusinessService>
+		</rsm:BusinessScopeProcess>
+	</rsm:ResponseFromMPA_Confirm_HeaderInformation>
+	<rsm:Switch>
+		<rsm:DocumentID>DID_Beispiel_3_3_1_x_EndEinW_21_11b</rsm:DocumentID>
+		<rsm:MeteringPoint>
+			<rsm:VSENationalID schemeID="VSE" schemeAgencyID="260">CH9999901234500000000000000000002</rsm:VSENationalID>
+			<rsm:BalanceResponsible>
+				<rsm:ID>
+					<rsm:EICID schemeAgencyID="305">12X-PARTY-K-000Y</rsm:EICID>
+				</rsm:ID>
+			</rsm:BalanceResponsible>
+			<rsm:BalanceSupplier>
+				<rsm:ID>
+					<rsm:EICID schemeAgencyID="305">12X-PARTY-A-000K</rsm:EICID>
+				</rsm:ID>
+			</rsm:BalanceSupplier>
+			<rsm:Consumer>
+				<rsm:Contact>
+					<eCH-0046:address>
+						<eCH-0046:addressCategory>1</eCH-0046:addressCategory>
+						<eCH-0046:postalAddress>
+							<eCH-0010:person>
+								<eCH-0010:mrMrs>2</eCH-0010:mrMrs>
+								<eCH-0010:title>Dr.</eCH-0010:title>
+								<eCH-0010:firstName>Hans</eCH-0010:firstName>
+								<eCH-0010:lastName>Muster</eCH-0010:lastName>
+							</eCH-0010:person>
+							<eCH-0010:addressInformation>
+								<eCH-0010:street>Gerechtigkeitsgasse</eCH-0010:street>
+								<eCH-0010:houseNumber>10</eCH-0010:houseNumber>
+								<eCH-0010:town>Bern</eCH-0010:town>
+								<eCH-0010:swissZipCode>3011</eCH-0010:swissZipCode>
+								<eCH-0010:country>
+									<eCH-0010:countryIdISO2>CH</eCH-0010:countryIdISO2>
+									<eCH-0010:countryNameShort>Schweiz</eCH-0010:countryNameShort>
+								</eCH-0010:country>
+							</eCH-0010:addressInformation>
+						</eCH-0046:postalAddress>
+					</eCH-0046:address>
+					<eCH-0046:email>
+						<eCH-0046:emailCategory>1</eCH-0046:emailCategory>
+						<eCH-0046:emailAddress>hans.muster@zuhause.ch</eCH-0046:emailAddress>
+					</eCH-0046:email>
+					<eCH-0046:email>
+						<eCH-0046:emailCategory>2</eCH-0046:emailCategory>
+						<eCH-0046:emailAddress>hans.muster@firma.ch</eCH-0046:emailAddress>
+					</eCH-0046:email>
+					<eCH-0046:phone>
+						<eCH-0046:phoneCategory>1</eCH-0046:phoneCategory>
+						<eCH-0046:phoneNumber>0041790123456</eCH-0046:phoneNumber>
+					</eCH-0046:phone>
+				</rsm:Contact>
+			</rsm:Consumer>
+			<rsm:SwitchDate>
+				<rsm:StartDate>2017-07-13</rsm:StartDate>
+			</rsm:SwitchDate>
+			<rsm:GridBillingMethod>
+				<rsm:GridBillingMethod>C01</rsm:GridBillingMethod>
+			</rsm:GridBillingMethod>
+		</rsm:MeteringPoint>
+		<rsm:RequestedTransaction>
+			<rsm:Status>39</rsm:Status>
+		</rsm:RequestedTransaction>
+		<rsm:ReferenceToRequestingDocumentID>DID_Beispiel_3_3_1_x_EndEinW_10_11c</rsm:ReferenceToRequestingDocumentID>
+		<rsm:BusinessProcessID>BusPID_Beispiel_3_3_1_4_EndEW_11_1a</rsm:BusinessProcessID>
+	</rsm:Switch>
+	<rsm:Switch>
+		<rsm:DocumentID>DID_Beispiel_3_3_1_x_EndEinW_21_11c</rsm:DocumentID>
+		<rsm:MeteringPoint>
+			<rsm:VSENationalID schemeID="VSE" schemeAgencyID="260">CH9999901234500000000000000000001</rsm:VSENationalID>
+			<rsm:BalanceResponsible>
+				<rsm:ID>
+					<rsm:EICID schemeAgencyID="305">12X-PARTY-L-000S</rsm:EICID>
+				</rsm:ID>
+			</rsm:BalanceResponsible>
+			<rsm:BalanceSupplier>
+				<rsm:ID>
+					<rsm:EICID schemeAgencyID="305">12X-PARTY-A-000K</rsm:EICID>
+				</rsm:ID>
+			</rsm:BalanceSupplier>
+			<rsm:Consumer>
+				<rsm:Contact>
+					<eCH-0046:address>
+						<eCH-0046:addressCategory>1</eCH-0046:addressCategory>
+						<eCH-0046:postalAddress>
+							<eCH-0010:organisation>
+								<eCH-0010:organisationName>Müller AG</eCH-0010:organisationName>
+								<eCH-0010:mrMrs>1</eCH-0010:mrMrs>
+								<eCH-0010:title>Prof.</eCH-0010:title>
+								<eCH-0010:firstName>Susanne</eCH-0010:firstName>
+								<eCH-0010:lastName>Frei</eCH-0010:lastName>
+							</eCH-0010:organisation>
+							<eCH-0010:addressInformation>
+								<eCH-0010:street>Zollikerstrasse</eCH-0010:street>
+								<eCH-0010:houseNumber>788</eCH-0010:houseNumber>
+								<eCH-0010:town>Zürich</eCH-0010:town>
+								<eCH-0010:swissZipCode>8008</eCH-0010:swissZipCode>
+								<eCH-0010:country>
+									<eCH-0010:countryIdISO2>CH</eCH-0010:countryIdISO2>
+									<eCH-0010:countryNameShort>Schweiz</eCH-0010:countryNameShort>
+								</eCH-0010:country>
+							</eCH-0010:addressInformation>
+						</eCH-0046:postalAddress>
+					</eCH-0046:address>
+					<eCH-0046:email>
+						<eCH-0046:emailCategory>2</eCH-0046:emailCategory>
+						<eCH-0046:emailAddress>susanne.frei@mueller_ag.ch</eCH-0046:emailAddress>
+					</eCH-0046:email>
+					<eCH-0046:phone>
+						<eCH-0046:phoneCategory>6</eCH-0046:phoneCategory>
+						<eCH-0046:phoneNumber>0041440000001</eCH-0046:phoneNumber>
+					</eCH-0046:phone>
+				</rsm:Contact>
+			</rsm:Consumer>
+			<rsm:SwitchDate>
+				<rsm:StartDate>2017-05-14</rsm:StartDate>
+			</rsm:SwitchDate>
+		</rsm:MeteringPoint>
+		<rsm:RequestedTransaction>
+			<rsm:Status>39</rsm:Status>
+		</rsm:RequestedTransaction>
+		<rsm:ReferenceToRequestingDocumentID>DID_Beispiel_3_3_1_x_EndEinW_10_11b</rsm:ReferenceToRequestingDocumentID>
+		<rsm:BusinessProcessID>BusPID_Beispiel_3_3_1_4_EndEW_11_1b</rsm:BusinessProcessID>
+	</rsm:Switch>
+</rsm:ResponseFromMPA_Confirm_11>

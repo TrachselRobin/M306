@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2014 rel. 2 sp1 (x64) (http://www.altova.com) von ICS (swissgrid ag) bearbeitet -->
+<rsm:NotificationFromMPA_11 xsi:schemaLocation="http://www.strom.ch NotificationFromMPA_1p1.xsd" xmlns:rsm="http://www.strom.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<rsm:NotificationFromMPA_HeaderInformation>
+		<rsm:HeaderVersion>1.0</rsm:HeaderVersion>
+		<rsm:Sender>
+			<rsm:ID>
+				<rsm:EICID schemeAgencyID="305">12X-PARTY-A-000K</rsm:EICID>
+			</rsm:ID>
+			<rsm:Role>DDZ</rsm:Role>
+		</rsm:Sender>
+		<rsm:Receiver>
+			<rsm:ID>
+				<rsm:EICID schemeAgencyID="305">12X-PARTY-B-000E</rsm:EICID>
+			</rsm:ID>
+			<rsm:Role>DDQ</rsm:Role>
+		</rsm:Receiver>
+		<rsm:InstanceDocument>
+			<rsm:DictionaryAgencyID>260</rsm:DictionaryAgencyID>
+			<rsm:VersionID listAgencyID="260">2007B</rsm:VersionID>
+			<rsm:DocumentID>DID_Beispiel_3_2_3_x_LiefGru_10_11a</rsm:DocumentID>
+			<rsm:DocumentType listAgencyID="260">
+				<rsm:ebIXCode>E44</rsm:ebIXCode>
+			</rsm:DocumentType>
+			<rsm:Creation>2007-12-10T14:36:05Z</rsm:Creation>
+			<rsm:Status>9</rsm:Status>
+		</rsm:InstanceDocument>
+		<rsm:BusinessScopeProcess>
+			<rsm:BusinessReasonType codeListAgency="260">
+				<rsm:ebIXCode>E06</rsm:ebIXCode>
+			</rsm:BusinessReasonType>
+			<rsm:BusinessDomainType listAgencyID="260">E01</rsm:BusinessDomainType>
+			<rsm:BusinessSectorType>23</rsm:BusinessSectorType>
+			<rsm:BusinessService>
+				<rsm:ServiceTransaction isIntelligibleCheckRequired="true"/>
+			</rsm:BusinessService>
+		</rsm:BusinessScopeProcess>
+	</rsm:NotificationFromMPA_HeaderInformation>
+	<rsm:Switch>
+		<rsm:DocumentID>DID_Beispiel_3_2_3_x_LiefGru_10_11b</rsm:DocumentID>
+		<rsm:MeteringPoint>
+			<rsm:VSENationalID schemeID="VSE" schemeAgencyID="260">CH9999901234500000000000000000001</rsm:VSENationalID>
+			<rsm:BalanceResponsible>
+				<rsm:ID>
+					<rsm:EICID schemeAgencyID="305">12X-PARTY-K-000Y</rsm:EICID>
+				</rsm:ID>
+			</rsm:BalanceResponsible>
+			<rsm:BalanceSupplier>
+				<rsm:ID>
+					<rsm:EICID schemeAgencyID="305">12X-PARTY-B-000E</rsm:EICID>
+				</rsm:ID>
+			</rsm:BalanceSupplier>
+			<rsm:SwitchDate>
+				<rsm:StartDate>2008-07-13</rsm:StartDate>
+			</rsm:SwitchDate>
+		</rsm:MeteringPoint>
+		<rsm:BusinessProcessID>BusPID_Beispiel_3_2_3_3_LiefG_11_1a</rsm:BusinessProcessID>
+	</rsm:Switch>
+	<rsm:Switch>
+		<rsm:DocumentID>DID_Beispiel_3_2_3_x_LiefGru_10_11c</rsm:DocumentID>
+		<rsm:MeteringPoint>
+			<rsm:VSENationalID schemeID="VSE" schemeAgencyID="260">CH9999901234500000000000000000002</rsm:VSENationalID>
+			<rsm:BalanceResponsible>
+				<rsm:ID>
+					<rsm:EICID schemeAgencyID="305">12X-PARTY-L-000S</rsm:EICID>
+				</rsm:ID>
+			</rsm:BalanceResponsible>
+			<rsm:BalanceSupplier>
+				<rsm:ID>
+					<rsm:EICID schemeAgencyID="305">12X-PARTY-B-000E</rsm:EICID>
+				</rsm:ID>
+			</rsm:BalanceSupplier>
+			<rsm:AncillaryServiceProvider>
+				<rsm:ID>
+					<rsm:EICID schemeAgencyID="305">12X-PARTY-D-0002</rsm:EICID>
+				</rsm:ID>
+			</rsm:AncillaryServiceProvider>
+			<rsm:SwitchDate>
+				<rsm:StartDate>2008-07-14</rsm:StartDate>
+			</rsm:SwitchDate>
+		</rsm:MeteringPoint>
+		<rsm:BusinessProcessID>BusPID_Beispiel_3_2_3_3_LiefG_11_1b</rsm:BusinessProcessID>
+	</rsm:Switch>
+</rsm:NotificationFromMPA_11>
