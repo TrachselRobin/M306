@@ -1,52 +1,67 @@
-const express = require('express');
 const fs = require('fs');
+const path = require('path');
 const { XMLParser } = require('fast-xml-parser');
 const csvWriter = require('fast-csv');
-const path = require('path');
-const router = express.Router();
 
-router.use(express.json());
-router.use(express.urlencoded({ extended: true }));
+const inputDir = path.join('../data/ESL-Files');
+const outputCsvDir = path.join('../data/ESL-CSV');
+const outputJsonDir = path.join('../data/ESL-JSON');
 
-router.get('', (req, res) => {
-    res.json({ message: 'esl test' });
-});
+if (!fs.existsSync(outputCsvDir)) fs.mkdirSync(outputCsvDir);
+if (!fs.existsSync(outputJsonDir)) fs.mkdirSync(outputJsonDir);
 
-function convertXMLToCSV(xmlFilePath, outputCsvFilePath = null) {
+function convertXMLToCSV(xmlFilePath, outputCsvFilePath) {
     const xmlData = fs.readFileSync(xmlFilePath, 'utf-8');
-
     const parser = new XMLParser({
         ignoreAttributes: false,
         attributeNamePrefix: ""
     });
 
-    const jsonData = parser.parse(xmlData);
-
-    console.log(JSON.stringify(jsonData, null, 2));
-
-    const timePeriodEnd = jsonData.ESLBillingData.Meter.TimePeriod.end;
-    const valueRows = jsonData.ESLBillingData.Meter.TimePeriod.ValueRow;
-
-    if (!valueRows || !Array.isArray(valueRows)) {
-        console.error('ValueRow is not defined or is not an array.');
+    let jsonData;
+    try {
+        jsonData = parser.parse(xmlData);
+    } catch (err) {
+        console.error(`Error parsing XML for file: ${xmlFilePath}`, err);
         return;
     }
 
-    const rows = valueRows.map(row => ({
-        timePeriodEnd,
-        obis: row.obis,
-        valueTimeStamp: row.valueTimeStamp || '',
-        value: row.value,
-        status: row.status
-    }));
+    console.log(`Processing CSV for file: ${xmlFilePath}`);
 
-    if (!outputCsvFilePath) {
-        csvWriter
-            .writeToString(rows, { headers: true })
-            .then(data => {
-                console.log(data);
-            })
-            .catch(err => console.error('Error generating CSV string:', err));
+    const timePeriods = jsonData?.ESLBillingData?.Meter?.TimePeriod;
+
+    if (!timePeriods) {
+        console.warn(`No TimePeriod found in file: ${xmlFilePath}`);
+        return;
+    }
+
+    const rows = [];
+
+    const timePeriodsArray = Array.isArray(timePeriods) ? timePeriods : [timePeriods];
+
+    timePeriodsArray.forEach(period => {
+        const timePeriodEnd = period.end;
+        const valueRows = period.ValueRow;
+
+        if (!valueRows) {
+            console.warn(`No ValueRow found in TimePeriod for file: ${xmlFilePath}`);
+            return;
+        }
+
+        const valueRowsArray = Array.isArray(valueRows) ? valueRows : [valueRows];
+
+        valueRowsArray.forEach(row => {
+            rows.push({
+                timePeriodEnd,
+                obis: row.obis,
+                valueTimeStamp: row.valueTimeStamp || '',
+                value: row.value,
+                status: row.status
+            });
+        });
+    });
+
+    if (rows.length === 0) {
+        console.warn(`No data to write for file: ${xmlFilePath}`);
         return;
     }
 
@@ -64,39 +79,86 @@ function convertXMLToCSV(xmlFilePath, outputCsvFilePath = null) {
 
 function convertXMLToJSON(xmlFilePath, outputJsonFilePath) {
     const xmlData = fs.readFileSync(xmlFilePath, 'utf-8');
-
     const parser = new XMLParser({
-        ignoreAttributes: false, // To capture attributes like obis, value, and valueTimeStamp
-        attributeNamePrefix: "" // Remove prefix for easier access
+        ignoreAttributes: false,
+        attributeNamePrefix: ""
     });
 
-    const jsonData = parser.parse(xmlData);
+    let jsonData;
+    try {
+        jsonData = parser.parse(xmlData);
+    } catch (err) {
+        console.error(`Error parsing XML for file: ${xmlFilePath}`, err);
+        return;
+    }
 
-    console.log(JSON.stringify(jsonData, null, 2));
+    console.log(`Processing JSON for file: ${xmlFilePath}`);
 
-    const timePeriodEnd = jsonData.ESLBillingData.Meter.TimePeriod.end;
-    const valueRows = jsonData.ESLBillingData.Meter.TimePeriod.ValueRow; // Access ValueRow directly
+    const timePeriods = jsonData?.ESLBillingData?.Meter?.TimePeriod;
+
+    if (!timePeriods) {
+        console.warn(`No TimePeriod found in file: ${xmlFilePath}`);
+        return;
+    }
 
     const jsonOutput = {
-        timePeriodEnd: timePeriodEnd,
-        values: valueRows.map(row => ({
-            obis: row.obis,            // OBIS code
-            valueTimeStamp: row.valueTimeStamp || '', // The timestamp if available
-            value: row.value,          // The meter value
-            status: row.status         // The status value
-        }))
+        values: []
     };
+
+    const timePeriodsArray = Array.isArray(timePeriods) ? timePeriods : [timePeriods];
+
+    timePeriodsArray.forEach(period => {
+        const timePeriodEnd = period.end;
+        const valueRows = period.ValueRow;
+
+        if (!valueRows) {
+            console.warn(`No ValueRow found in TimePeriod for file: ${xmlFilePath}`);
+            return;
+        }
+
+        const valueRowsArray = Array.isArray(valueRows) ? valueRows : [valueRows];
+
+        valueRowsArray.forEach(row => {
+            jsonOutput.values.push({
+                timePeriodEnd,
+                obis: row.obis,
+                valueTimeStamp: row.valueTimeStamp || '',
+                value: row.value,
+                status: row.status
+            });
+        });
+    });
+
+    if (jsonOutput.values.length === 0) {
+        console.warn(`No data to write for file: ${xmlFilePath}`);
+        return;
+    }
 
     fs.writeFileSync(outputJsonFilePath, JSON.stringify(jsonOutput, null, 2), 'utf-8');
     console.log(`JSON file successfully created: ${outputJsonFilePath}`);
 }
 
-convertXMLToCSV(
-    path.join('../data/ESL-Files', 'EdmRegisterWertExport_20190131_eslevu_20190322160349.xml'),
-    path.join('../data/ESL-CSV', 'output.csv')
-);
+function processAllXMLFiles() {
+    fs.readdir(inputDir, (err, files) => {
+        if (err) {
+            console.error('Error reading input directory:', err);
+            return;
+        }
 
-convertXMLToJSON(
-    path.join('../data/ESL-Files', 'EdmRegisterWertExport_20190131_eslevu_20190322160349.xml'),
-    path.join('../data/ESL-JSON', 'output.json')
-);
+        files.forEach(file => {
+            const xmlFilePath = path.join(inputDir, file);
+
+            if (path.extname(file).toLowerCase() === '.xml') {
+                const baseName = path.basename(file, '.xml');
+
+                const outputCsvFilePath = path.join(outputCsvDir, `${baseName}.csv`);
+                const outputJsonFilePath = path.join(outputJsonDir, `${baseName}.json`);
+
+                convertXMLToCSV(xmlFilePath, outputCsvFilePath);
+                convertXMLToJSON(xmlFilePath, outputJsonFilePath);
+            }
+        });
+    });
+}
+
+processAllXMLFiles();
