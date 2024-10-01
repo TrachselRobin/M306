@@ -12,3 +12,4 @@ const sqlQuery = require('./sql.js')
 router.use(express.json())
 router.use(express.urlencoded({ extended: true }))
 router.use(log)
+

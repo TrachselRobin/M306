@@ -4,13 +4,14 @@
   DESCRIPTION:          Backend entry point
 */
 
-const express = require('express')
-const sdat = require('./sdat.js')
-const esl = require('./esl.js')
+const express  = require('express')
+const sdat     = require('./sdat.js')
+const esl      = require('./esl.js')
+const user     = require('./user.js')
 
-const app = express()
-const host = '127.0.0.1'
-const port = 3000
+const app      = express()
+const host     = '127.0.0.1'
+const port     = 3000
 
 const sqlQuery = require('./sql.js')
 
