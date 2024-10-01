@@ -61,8 +61,6 @@ router.post('/login', async (req, res) => {
 function verify(req, res, next) {
     // Token wird aus dem Authorization-Header extrahiert
     const authHeader = req.headers['authorization'];
-
-    console.log(authHeader);
     
     // Überprüfen, ob ein Token vorhanden ist
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
