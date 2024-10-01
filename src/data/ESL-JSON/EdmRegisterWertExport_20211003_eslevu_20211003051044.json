@@ -1,0 +1,116 @@
+{
+  "values": [
+    {
+      "timePeriodEnd": "2021-10-01T00:00:00",
+      "obis": "1-1:1.6.1",
+      "valueTimeStamp": "2021-09-21T07:45:00",
+      "value": "7.9000",
+      "status": "V"
+    },
+    {
+      "timePeriodEnd": "2021-10-01T00:00:00",
+      "obis": "1-1:1.6.2",
+      "valueTimeStamp": "2021-09-21T06:00:00",
+      "value": "4.5000",
+      "status": "V"
+    },
+    {
+      "timePeriodEnd": "2021-10-01T00:00:00",
+      "obis": "1-1:1.8.1",
+      "valueTimeStamp": "",
+      "value": "19145.5000",
+      "status": "V"
+    },
+    {
+      "timePeriodEnd": "2021-10-01T00:00:00",
+      "obis": "1-1:1.8.2",
+      "valueTimeStamp": "",
+      "value": "36001.6000",
+      "status": "V"
+    },
+    {
+      "timePeriodEnd": "2021-10-01T00:00:00",
+      "obis": "1-1:2.6.1",
+      "valueTimeStamp": "2021-09-04T13:00:00",
+      "value": "5.0000",
+      "status": "V"
+    },
+    {
+      "timePeriodEnd": "2021-10-01T00:00:00",
+      "obis": "1-1:2.6.2",
+      "valueTimeStamp": "2021-09-04T13:00:00",
+      "value": "5.0000",
+      "status": "V"
+    },
+    {
+      "timePeriodEnd": "2021-10-01T00:00:00",
+      "obis": "1-1:2.8.1",
+      "valueTimeStamp": "",
+      "value": "15231.9000",
+      "status": "V"
+    },
+    {
+      "timePeriodEnd": "2021-10-01T00:00:00",
+      "obis": "1-1:2.8.2",
+      "valueTimeStamp": "",
+      "value": "8362.0000",
+      "status": "V"
+    },
+    {
+      "timePeriodEnd": "2021-10-01T00:00:00",
+      "obis": "1-1:5.8.1",
+      "valueTimeStamp": "",
+      "value": "442.0000",
+      "status": "V"
+    },
+    {
+      "timePeriodEnd": "2021-10-01T00:00:00",
+      "obis": "1-1:5.8.2",
+      "valueTimeStamp": "",
+      "value": "662.0000",
+      "status": "V"
+    },
+    {
+      "timePeriodEnd": "2021-10-01T00:00:00",
+      "obis": "1-1:6.8.1",
+      "valueTimeStamp": "",
+      "value": "49.0000",
+      "status": "V"
+    },
+    {
+      "timePeriodEnd": "2021-10-01T00:00:00",
+      "obis": "1-1:6.8.2",
+      "valueTimeStamp": "",
+      "value": "12.0000",
+      "status": "V"
+    },
+    {
+      "timePeriodEnd": "2021-10-01T00:00:00",
+      "obis": "1-1:7.8.1",
+      "valueTimeStamp": "",
+      "value": "2325.0000",
+      "status": "V"
+    },
+    {
+      "timePeriodEnd": "2021-10-01T00:00:00",
+      "obis": "1-1:7.8.2",
+      "valueTimeStamp": "",
+      "value": "1188.0000",
+      "status": "V"
+    },
+    {
+      "timePeriodEnd": "2021-10-01T00:00:00",
+      "obis": "1-1:8.8.1",
+      "valueTimeStamp": "",
+      "value": "3524.0000",
+      "status": "V"
+    },
+    {
+      "timePeriodEnd": "2021-10-01T00:00:00",
+      "obis": "1-1:8.8.2",
+      "valueTimeStamp": "",
+      "value": "9266.0000",
+      "status": "V"
+    }
+  ]
+}
