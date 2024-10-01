@@ -19,9 +19,9 @@ router.get('', (req, res) => {
     if (err) {
       return res.status(500).json({ message: 'Fehler beim Lesen des Verzeichnisses', error: err });
     }
+
     res.json({ files });
   });
-
 })
 
 module.exports = router;
