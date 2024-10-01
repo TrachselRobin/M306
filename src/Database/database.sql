@@ -4,23 +4,17 @@ USE energieagentur_buenzli;
 
 
 CREATE TABLE `Users` (
-    `ID` INT AUTO_INCREMENT PRIMARY KEY,  -- Benutzer ID 
+    `ID` INT AUTO_INCREMENT PRIMARY KEY,  -- Benutzer ID umbenannt zu ID
     `username` VARCHAR(100) NOT NULL UNIQUE,
     `password_hash` VARCHAR(255) NOT NULL,
     `email` VARCHAR(255) NOT NULL UNIQUE,
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE `sessions` (
-    `ID` INT AUTO_INCREMENT PRIMARY KEY,  -- Session ID 
-    `user_id` INT NOT NULL,
-    `session_id` VARCHAR(255) NOT NULL,
-    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (`user_id`) REFERENCES `Users`(`ID`) ON DELETE CASCADE  -- user_id referenziert die ID Spalte von Users
-);
+
 
 CREATE TABLE `Sensors` (
-    `ID` VARCHAR(50) PRIMARY KEY,  -- Sensor ID 
+    `ID` VARCHAR(50) PRIMARY KEY,  -- Sensor ID umbenannt zu ID
     `obis_code` VARCHAR(50) NOT NULL,
     `sensor_type` ENUM('Bezug', 'Einspeisung') NOT NULL,
     `location` VARCHAR(255) NOT NULL,
@@ -28,7 +22,7 @@ CREATE TABLE `Sensors` (
 );
 
 CREATE TABLE `Meter_Readings` (
-    `ID` INT AUTO_INCREMENT PRIMARY KEY,  -- Zählerstands ID 
+    `ID` INT AUTO_INCREMENT PRIMARY KEY,  -- Zählerstands ID umbenannt zu ID
     `sensor_id` VARCHAR(50),
     `timestamp` TIMESTAMP NOT NULL,
     `absolute_value` DECIMAL(12,4) NOT NULL,
@@ -40,7 +34,7 @@ CREATE TABLE `Meter_Readings` (
 );
 
 CREATE TABLE `Interval_Readings` (
-    `ID` INT AUTO_INCREMENT PRIMARY KEY,  -- Intervall ID
+    `ID` INT AUTO_INCREMENT PRIMARY KEY,  -- Intervall ID umbenannt zu ID
     `sensor_id` VARCHAR(50),
     `start_time` TIMESTAMP NOT NULL,
     `end_time` TIMESTAMP NOT NULL,
@@ -50,7 +44,7 @@ CREATE TABLE `Interval_Readings` (
 );
 
 CREATE TABLE `CSV_Exports` (
-    `ID` INT AUTO_INCREMENT PRIMARY KEY,  -- CSV Export ID
+    `ID` INT AUTO_INCREMENT PRIMARY KEY,  -- CSV Export ID umbenannt zu ID
     `sensor_id` VARCHAR(50),
     `export_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     `file_path` VARCHAR(255) NOT NULL,
@@ -59,10 +53,13 @@ CREATE TABLE `CSV_Exports` (
 );
 
 CREATE TABLE `JSON_Exports` (
-    `ID` INT AUTO_INCREMENT PRIMARY KEY,  -- JSON Export ID 
+    `ID` INT AUTO_INCREMENT PRIMARY KEY,  -- JSON Export ID umbenannt zu ID
     `sensor_id` VARCHAR(50),
     `export_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     `json_data` TEXT NOT NULL,
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (`sensor_id`) REFERENCES `Sensors`(`ID`) ON DELETE CASCADE  -- sensor_id referenziert die ID Spalte von Sensors
 );
+
+INSERT INTO `Users` (username, password_hash, email) VALUES
+('Robin', '84i8fNlTuVH/344GJ12UlG3FLwPtllNkl/vlNEadONY=', 'asdf@asdf.asdf');
