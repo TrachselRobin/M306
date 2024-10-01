@@ -16,7 +16,8 @@ const express = require('express')
 const router = express.Router()
 
 const sqlQuery = require('./sql.js')
-const sha256 = require('js-sha256').sha256
+const crypto = require('crypto');
+const hash = crypto.createHash('sha256');
 const jwt = require('jsonwebtoken');
 
 router.use(express.json())
@@ -36,7 +37,8 @@ router.get('/:id', verify, async (req, res) => {
 
 router.post('/login', async (req, res) => {
     const { username, password } = req.body;
-    const passwordHash = sha256(password);
+
+    const passwordHash = hashPassword(password);
 
     const sql = `SELECT * FROM users WHERE username = ? AND password_hash = ?`;
     const result = await sqlQuery(sql, [username, passwordHash]);
@@ -70,6 +72,10 @@ function verify(req, res, next) {
             }
         });
     }
+}
+
+function hashPassword(password) {
+    return createHash('sha256').update(password).digest('base64');
 }
 
 module.exports = router;
