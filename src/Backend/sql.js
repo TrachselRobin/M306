@@ -5,7 +5,7 @@
 */
 
 const express = require('express');
-const MYSQL = require('mysql');
+const MYSQL = require('mysql2');
 
 async function sqlQuery(SQL) {
     return new Promise((resolve, reject) => {
