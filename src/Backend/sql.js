@@ -21,8 +21,8 @@ async function sqlQuery(SQL) {
             set MYSQL_USER=root
             set MYSQL_PWD=1234
 
-            echo %MYSQL_USER%
-            echo %MYSQL_PWD%
+            Write-Output $Env:MYSQL_USER
+            Write-Output $Env:MYSQL_PWD
         */
 
         CONNECTION.connect((err) => {
