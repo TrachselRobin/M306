@@ -10,10 +10,10 @@ const MYSQL = require('mysql2');
 async function sqlQuery(SQL) {
     return new Promise((resolve, reject) => {
         const CONNECTION = MYSQL.createConnection({
-            host: process.env.MYSQL_HOST || "localhost",
-            database: process.env.MYSQL_DATABASE || "energieagentur_buenzli",
-            user: process.env.MYSQL_USER || "root", // user auf MySQL Workbench ersichtlich
-            password: process.env.MYSQL_PWD || "1234" // Ein Passwort, das auf MySQL Workbench gesetzt wurde
+            host: "localhost",
+            database: "energieagentur_buenzli",
+            user: "root", // user auf MySQL Workbench ersichtlich
+            password: "MysRob04." // Ein Passwort, das auf MySQL Workbench gesetzt wurde
         });
 
         CONNECTION.connect((err) => {

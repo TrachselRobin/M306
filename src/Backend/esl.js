@@ -6,6 +6,8 @@ const csvWriter = require('fast-csv');
 
 const router = express.Router();
 
+const sqlQuery = require('./sql.js')
+
 const inputDir = path.join('../data/ESL-Files');
 const outputCsvDir = path.join('../data/ESL-CSV');
 const outputJsonDir = path.join('../data/ESL-JSON');

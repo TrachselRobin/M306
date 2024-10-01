@@ -9,6 +9,8 @@ const router = express.Router()
 const fs = require('fs');
 const path = require('path');
 
+const sqlQuery = require('./sql.js')
+
 router.use(express.json())
 router.use(express.urlencoded({ extended: true }))
 

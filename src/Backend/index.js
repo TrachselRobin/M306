@@ -12,6 +12,8 @@ const app = express()
 const host = '127.0.0.1'
 const port = 3000
 
+const sqlQuery = require('./sql.js')
+
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(log)
@@ -20,7 +22,10 @@ app.use('/sdat', sdat)
 app.use('/esl', esl)
 
 // Catch-all route for undefined endpoints
-app.get('*', (req, res) => {
+app.get('*', async (req, res) => {
+  const sql = 'SELECT * FROM users'
+  const result = await sqlQuery(sql)
+  console.log(result)
   res.status(404).send({ error: 'Endpoint not found' })
 })
 
