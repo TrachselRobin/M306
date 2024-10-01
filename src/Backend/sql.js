@@ -4,7 +4,6 @@
   DESCRIPTION:          MySQL database connection
 */
 
-const express = require('express');
 const MYSQL   = require('mysql2');
 
 async function sqlQuery(SQL) {
