@@ -12,9 +12,18 @@ async function sqlQuery(SQL) {
         const CONNECTION = MYSQL.createConnection({
             host: "localhost",
             database: "energieagentur_buenzli",
-            user: "root", // user auf MySQL Workbench ersichtlich
-            password: "1234" // Ein Passwort, das auf MySQL Workbench gesetzt wurde
+            user: process.env.MYSQL_USER || "root", // user auf MySQL Workbench ersichtlich
+            password: process.env.MYSQL_PWD || "1234" // Ein Passwort, das auf MySQL Workbench gesetzt wurde
         });
+
+        /*
+            Windows:
+            set MYSQL_USER=root
+            set MYSQL_PWD=1234
+
+            echo %MYSQL_USER%
+            echo %MYSQL_PWD%
+        */
 
         CONNECTION.connect((err) => {
             if (err) {
