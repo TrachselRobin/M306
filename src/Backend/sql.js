@@ -13,7 +13,7 @@ async function sqlQuery(SQL) {
             host: "localhost",
             database: "energieagentur_buenzli",
             user: "root", // user auf MySQL Workbench ersichtlich
-            password: "MysRob04." // Ein Passwort, das auf MySQL Workbench gesetzt wurde
+            password: "1234" // Ein Passwort, das auf MySQL Workbench gesetzt wurde
         });
 
         CONNECTION.connect((err) => {
