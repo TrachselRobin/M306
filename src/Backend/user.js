@@ -21,7 +21,6 @@ const jwt = require('jsonwebtoken');
 
 router.use(express.json())
 router.use(express.urlencoded({ extended: true }))
-router.use(log)
 
 router.get('', verify, async (req, res) => {
     const sql = 'SELECT * FROM users'
@@ -72,3 +71,5 @@ function verify(req, res, next) {
         });
     }
 }
+
+module.exports = router;
