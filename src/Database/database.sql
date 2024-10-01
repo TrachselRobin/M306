@@ -44,21 +44,17 @@ CREATE TABLE `Interval_Readings` (
 );
 
 CREATE TABLE `CSV_Exports` (
-    `ID` INT AUTO_INCREMENT PRIMARY KEY,  -- CSV Export ID umbenannt zu ID
-    `sensor_id` VARCHAR(50),
-    `export_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    `file_path` VARCHAR(255) NOT NULL,
-    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (`sensor_id`) REFERENCES `Sensors`(`ID`) ON DELETE CASCADE  -- sensor_id referenziert die ID Spalte von Sensors
+                               `ID` INT AUTO_INCREMENT PRIMARY KEY,
+                               `export_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                               `csv_data` TEXT NOT NULL,
+                               `created_at` TIMESTAMP
 );
 
 CREATE TABLE `JSON_Exports` (
-    `ID` INT AUTO_INCREMENT PRIMARY KEY,  -- JSON Export ID umbenannt zu ID
-    `sensor_id` VARCHAR(50),
-    `export_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    `json_data` TEXT NOT NULL,
-    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (`sensor_id`) REFERENCES `Sensors`(`ID`) ON DELETE CASCADE  -- sensor_id referenziert die ID Spalte von Sensors
+                                `ID` INT AUTO_INCREMENT PRIMARY KEY,
+                                `export_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                                `json_data` TEXT NOT NULL,
+                                `created_at` TIMESTAMP
 );
 
 INSERT INTO `Users` (username, password_hash, email) VALUES
