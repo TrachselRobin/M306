@@ -13,6 +13,7 @@ const sqlQuery = require('./sql.js')
 
 router.use(express.json())
 router.use(express.urlencoded({ extended: true }))
+router.use(log)
 
 router.get('', (req, res) => {
   const dirPath = path.join(__dirname, '..', 'data', 'SDAT-Files');
