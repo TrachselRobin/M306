@@ -4,14 +4,14 @@
   DESCRIPTION:          Backend entry point
 */
 
-const express  = require('express')
-const sdat     = require('./sdat.js')
-const esl      = require('./esl.js')
-const user     = require('./user.js')
+const express = require('express')
+const sdat = require('./sdat.js')
+const esl = require('./esl.js')
+const user = require('./user.js')
 
-const app      = express()
-const host     = '127.0.0.1'
-const port     = 3000
+const app = express()
+const host = '127.0.0.1'
+const port = 3000
 
 const sqlQuery = require('./sql.js')
 
@@ -21,6 +21,7 @@ app.use(log)
 
 app.use('/sdat', sdat)
 app.use('/esl', esl)
+app.use('/user', user)
 
 // Catch-all route for undefined endpoints
 app.get('*', async (req, res) => {
