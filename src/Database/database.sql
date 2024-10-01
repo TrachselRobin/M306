@@ -11,6 +11,14 @@ CREATE TABLE `Users` (
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE `sessions` (
+    `ID` INT AUTO_INCREMENT PRIMARY KEY,  -- Session ID 
+    `user_id` INT NOT NULL,
+    `session_id` VARCHAR(255) NOT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (`user_id`) REFERENCES `Users`(`ID`) ON DELETE CASCADE  -- user_id referenziert die ID Spalte von Users
+);
+
 CREATE TABLE `Sensors` (
     `ID` VARCHAR(50) PRIMARY KEY,  -- Sensor ID 
     `obis_code` VARCHAR(50) NOT NULL,
