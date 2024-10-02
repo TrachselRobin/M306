@@ -5,30 +5,33 @@
 */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	min-height: 100vh;
 }
 
-header, main, footer {
-  width: 60vw;
+header,
+main,
+footer {
+	width: 60vw;
 }
 
 main {
-  height: 100vh;
-  background-color: rgb(44, 153, 20);
+	height: 100vh;
+	background-color: rgb(44, 153, 20);
 }
 
-header, footer {
-  height: 10vh;
-  background-color: rgb(20, 74, 88);
+header,
+footer {
+	height: 10vh;
+	background-color: rgb(20, 74, 88);
 }
