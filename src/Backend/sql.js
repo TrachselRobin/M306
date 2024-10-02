@@ -12,7 +12,7 @@ async function sqlQuery(SQL) {
             host: "localhost",
             database: "energieagentur_buenzli",
             user: process.env.MYSQL_USER || "root", // user auf MySQL Workbench ersichtlich
-            password: process.env.MYSQL_PWD || "1234" // Ein Passwort, das auf MySQL Workbench gesetzt wurde
+            password: process.env.MYSQL_PWD || "Tank-247" // Ein Passwort, das auf MySQL Workbench gesetzt wurde
         });
 
         /*

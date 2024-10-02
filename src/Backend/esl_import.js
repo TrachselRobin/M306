@@ -1,62 +1,83 @@
 const fs = require('fs');
 const path = require('path');
-const mysql = require('mysql2');
+const sqlQuery = require('./sql'); // Import your SQL connection module
 
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '1234',
-    database: 'energieagentur_buenzli',
-});
+const directoryPath = '../data/ESL-JSON';
 
-connection.connect((err) => {
-    if (err) throw err;
-    console.log('Connected to the database.');
-});
+// Function to insert data into the database
+async function insertData(eslData) {
+    try {
+        // Create a Set to store processed time periods
+        const processedTimePeriods = new Set();
 
-const jsonDirectoryPath = path.join('../data/ESL-JSON');
-const csvDirectoryPath = path.join('../data/ESL-CSV'); // Update to the correct path for CSV files
+        // Loop through each entry in the values array
+        for (const entry of eslData.values) {
+            const { timePeriodEnd, obis, value, status } = entry;
 
-fs.readdir(jsonDirectoryPath, (err, files) => {
-    if (err) throw err;
+            // Format the timePeriodEnd to only include the year and month (YYYY-MM)
+            const monthKey = timePeriodEnd.slice(0, 7);
 
-    files.forEach((file) => {
-        const filePath = path.join(jsonDirectoryPath, file);
-        if (path.extname(file) === '.json') {
-            fs.readFile(filePath, 'utf8', (err, data) => {
-                if (err) throw err;
+            // Check if this month has already been processed
+            if (processedTimePeriods.has(monthKey)) {
+                continue; // Skip already processed months
+            }
 
-                const query = 'INSERT INTO JSON_Exports (json_data) VALUES (?)';
-                connection.query(query, [data], (err, results) => {
-                    if (err) throw err;
-                    console.log(`Inserted data from JSON file ${file}: ID = ${results.insertId}`);
-                });
-            });
+            // Check if the timePeriodEnd already exists in the esl table
+            const checkSQL = `SELECT COUNT(*) AS count FROM esl WHERE TimePeriodEnd = '${timePeriodEnd}'`;
+            const checkResult = await sqlQuery(checkSQL);
+
+            if (checkResult[0].count === 0) {
+                // Insert into the esl table if not already present
+                const eslInsertSQL = `
+                    INSERT INTO esl (TimePeriodEnd) 
+                    VALUES ('${timePeriodEnd}')
+                    ON DUPLICATE KEY UPDATE ID = LAST_INSERT_ID(ID);`;
+                const eslResult = await sqlQuery(eslInsertSQL);
+                const eslID = eslResult.insertId; // Get the last inserted ID
+
+                // Insert into the obis table
+                const obisInsertSQL = `
+                    INSERT INTO obis (code, value, status) 
+                    VALUES ('${obis}', ${value}, '${status}');`;
+                await sqlQuery(obisInsertSQL);
+
+                // Insert into the esl_time_periods table
+                const eslTimePeriodsInsertSQL = `
+                    INSERT INTO esl_time_periods (esl_ID, TimePeriodEnd) 
+                    VALUES (${eslID}, '${timePeriodEnd}');`;
+                await sqlQuery(eslTimePeriodsInsertSQL);
+
+                // Mark this month as processed
+                processedTimePeriods.add(monthKey);
+            }
         }
-    });
-});
+    } catch (error) {
+        console.error('Error inserting data:', error);
+    }
+}
 
-fs.readdir(csvDirectoryPath, (err, files) => {
-    if (err) throw err;
-
-    files.forEach((file) => {
-        const filePath = path.join(csvDirectoryPath, file);
-        if (path.extname(file) === '.csv') {
-            fs.readFile(filePath, 'utf8', (err, data) => {
-                if (err) throw err;
-
-                const query = 'INSERT INTO CSV_Exports (csv_data) VALUES (?)';
-                connection.query(query, [data], (err, results) => {
-                    if (err) throw err;
-                    console.log(`Inserted data from CSV file ${file}: ID = ${results.insertId}`);
-                });
-            });
+// Function to read and process all JSON files in the directory
+async function processFiles() {
+    fs.readdir(directoryPath, (err, files) => {
+        if (err) {
+            console.error('Unable to scan directory:', err);
+            return;
         }
+        files.forEach(async (file) => {
+            if (path.extname(file) === '.json') {
+                const filePath = path.join(directoryPath, file);
+                fs.readFile(filePath, 'utf8', async (err, data) => {
+                    if (err) {
+                        console.error('Error reading file:', err);
+                        return;
+                    }
+                    const eslData = JSON.parse(data);
+                    await insertData(eslData);
+                });
+            }
+        });
     });
-});
+}
 
-// Close the connection after a while to allow all inserts to complete
-setTimeout(() => {
-    connection.end();
-    console.log('Database connection closed.');
-}, 5000);
+// Run the file processing
+processFiles();
