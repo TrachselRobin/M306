@@ -5,7 +5,7 @@
 */
 
 document.addEventListener("DOMContentLoaded", () => {
-  const ctx = document.getElementById('myChart').getContext('2d');
+  const ctx = document.getElementById('big-chart').getContext('2d');
 
   // Beispiel-Daten für das Säulendiagramm
   const data = {
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     plugins: {
       zoom: {
         pan: {
-          enabled: false,  // Deaktiviere eingebautes Schwenken
+          enabled: true,  // Deaktiviere eingebautes Schwenken
           mode: 'x'      // Wir machen das manuell
         },
         zoom: {
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let startX = 0;
   let scrollStart = 0;
 
-  const canvas = document.getElementById('myChart');
+  const canvas = document.getElementById('big-chart');
 
   // Ereignis für Maus-Button-Down (Start des Schwenkens)
   canvas.addEventListener('mousedown', function (event) {
