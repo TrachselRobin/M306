@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS energieagentur_buenzli;
-CREATE DATABASE energieagentur_buenzli;
-USE energieagentur_buenzli;
+DROP DATABASE IF EXISTS `energieagentur_buenzli`;
+CREATE DATABASE `energieagentur_buenzli`;
+USE `energieagentur_buenzli`;
 
-
+-- Beibehalten der Tabelle Users
 CREATE TABLE `Users` (
     `ID` INT AUTO_INCREMENT PRIMARY KEY,  -- Benutzer ID umbenannt zu ID
     `username` VARCHAR(100) NOT NULL UNIQUE,
@@ -11,50 +11,43 @@ CREATE TABLE `Users` (
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-
-
-CREATE TABLE `Sensors` (
-    `ID` VARCHAR(50) PRIMARY KEY,  -- Sensor ID umbenannt zu ID
-    `obis_code` VARCHAR(50) NOT NULL,
-    `sensor_type` ENUM('Bezug', 'Einspeisung') NOT NULL,
-    `location` VARCHAR(255) NOT NULL,
-    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
-CREATE TABLE `Meter_Readings` (
-    `ID` INT AUTO_INCREMENT PRIMARY KEY,  -- Zählerstands ID umbenannt zu ID
-    `sensor_id` VARCHAR(50),
-    `timestamp` TIMESTAMP NOT NULL,
-    `absolute_value` DECIMAL(12,4) NOT NULL,
-    `relative_value` DECIMAL(12,4) NOT NULL,
-    `unit` VARCHAR(50) NOT NULL,
-    `condition` VARCHAR(50),
-    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (`sensor_id`) REFERENCES `Sensors`(`ID`) ON DELETE CASCADE  -- sensor_id referenziert die ID Spalte von Sensors
-);
-
-CREATE TABLE `Interval_Readings` (
-    `ID` INT AUTO_INCREMENT PRIMARY KEY,  -- Intervall ID umbenannt zu ID
-    `sensor_id` VARCHAR(50),
-    `start_time` TIMESTAMP NOT NULL,
-    `end_time` TIMESTAMP NOT NULL,
-    `resolution` INT NOT NULL,
-    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (`sensor_id`) REFERENCES `Sensors`(`ID`) ON DELETE CASCADE  -- sensor_id referenziert die ID Spalte von Sensors
-);
-
-CREATE TABLE `CSV_Exports` (
+-- Tabelle für SDAT-Dateien
+CREATE TABLE `sdat` (
     `ID` INT AUTO_INCREMENT PRIMARY KEY,
-    `export_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    `csv_data` TEXT NOT NULL,
-    `created_at` TIMESTAMP
+    `IntervalStartTime` DATETIME,
+    `IntervalEndTime` DATETIME,
+    `DocumentID` VARCHAR(255),
+    `VersionID` VARCHAR(50)
 );
 
-CREATE TABLE `JSON_Exports` (
+-- Tabelle für SDAT-Intervalldaten
+CREATE TABLE `sdat_intervals` (
     `ID` INT AUTO_INCREMENT PRIMARY KEY,
-    `export_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    `json_data` TEXT NOT NULL,
-    `created_at` TIMESTAMP
+    `sdat_ID` INT,
+    `sequenceNr` INT,
+    `volume` DECIMAL(10, 4),
+    FOREIGN KEY (`sdat_ID`) REFERENCES `sdat`(`ID`)
+);
+
+-- Tabelle für ESL-Dateien
+CREATE TABLE `esl` (
+    `ID` INT AUTO_INCREMENT PRIMARY KEY,
+    `TimePeriodEnd` DATETIME UNIQUE  -- Es sollte jeweils immer nur einmal dieselbe TimePeriodEnd vorkommen
+);
+
+-- Tabelle für OBIS-Daten
+CREATE TABLE `obis` (
+    `ID` INT AUTO_INCREMENT PRIMARY KEY,
+    `code` VARCHAR(20),
+    `value` DECIMAL(10, 4),
+    `status` VARCHAR(10)
+);
+
+CREATE TABLE `esl_time_periods` (
+    `ID` INT AUTO_INCREMENT PRIMARY KEY,
+    `esl_ID` INT NOT NULL,
+    `TimePeriodEnd` DATETIME NOT NULL,
+    UNIQUE KEY (`TimePeriodEnd`)
 );
 
 INSERT INTO `Users` (username, password_hash, email) VALUES
