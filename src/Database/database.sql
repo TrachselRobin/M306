@@ -44,17 +44,17 @@ CREATE TABLE `Interval_Readings` (
 );
 
 CREATE TABLE `CSV_Exports` (
-                               `ID` INT AUTO_INCREMENT PRIMARY KEY,
-                               `export_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                               `csv_data` TEXT NOT NULL,
-                               `created_at` TIMESTAMP
+    `ID` INT AUTO_INCREMENT PRIMARY KEY,
+    `export_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `csv_data` TEXT NOT NULL,
+    `created_at` TIMESTAMP
 );
 
 CREATE TABLE `JSON_Exports` (
-                                `ID` INT AUTO_INCREMENT PRIMARY KEY,
-                                `export_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                                `json_data` TEXT NOT NULL,
-                                `created_at` TIMESTAMP
+    `ID` INT AUTO_INCREMENT PRIMARY KEY,
+    `export_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `json_data` TEXT NOT NULL,
+    `created_at` TIMESTAMP
 );
 
 INSERT INTO `Users` (username, password_hash, email) VALUES

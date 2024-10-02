@@ -23,6 +23,8 @@ header,
 main,
 footer {
 	width: 60vw;
+	max-width: 1920px;
+	min-width: 1000px;
 }
 
 main {
@@ -34,4 +36,12 @@ header,
 footer {
 	height: 10vh;
 	background-color: rgb(20, 74, 88);
+}
+
+@media (max-width: 1000px) {
+	header,
+	main,
+	footer {
+		width: 100vw;
+	}
 }
