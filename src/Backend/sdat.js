@@ -1,3 +1,9 @@
+/*
+  VERSION:              Robin Trachsel
+  DATE:                 30.09.2024
+  DESCRIPTION:          Router zum Verarbeiten von SDAT-Dateien
+*/
+
 const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
