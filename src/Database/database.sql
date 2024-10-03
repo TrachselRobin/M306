@@ -20,38 +20,40 @@ CREATE TABLE `sdat` (
     `VersionID` VARCHAR(50)
 );
 
--- Tabelle für SDAT-Intervalldaten
-CREATE TABLE `sdat_intervals` (
-    `ID` INT AUTO_INCREMENT PRIMARY KEY,
-    `sdat_ID` INT,
-    `sequenceNr` INT,
-    `volume` DECIMAL(10, 4),
-    FOREIGN KEY (`sdat_ID`) REFERENCES `sdat`(`ID`)
+CREATE TABLE `Meter_Readings` (
+    `ID` INT AUTO_INCREMENT PRIMARY KEY,  -- Zählerstands ID umbenannt zu ID
+    `sensor_id` VARCHAR(50),
+    `timestamp` TIMESTAMP NOT NULL,
+    `absolute_value` DECIMAL(12,4) NOT NULL,
+    `relative_value` DECIMAL(12,4) NOT NULL,
+    `unit` VARCHAR(50) NOT NULL,
+    `condition` VARCHAR(50),
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (`sensor_id`) REFERENCES `Sensors`(`ID`) ON DELETE CASCADE  -- sensor_id referenziert die ID Spalte von Sensors
 );
 
--- Create esl_time_periods table before esl
-CREATE TABLE `esl_time_periods` (
-    `ID` INT AUTO_INCREMENT PRIMARY KEY,
-    `esl_ID` INT NOT NULL,
-    `TimePeriodEnd` DATETIME NOT NULL,
-    UNIQUE KEY (`TimePeriodEnd`)
+CREATE TABLE `Interval_Readings` (
+    `ID` INT AUTO_INCREMENT PRIMARY KEY,  -- Intervall ID umbenannt zu ID
+    `sensor_id` VARCHAR(50),
+    `start_time` TIMESTAMP NOT NULL,
+    `end_time` TIMESTAMP NOT NULL,
+    `resolution` INT NOT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (`sensor_id`) REFERENCES `Sensors`(`ID`) ON DELETE CASCADE  -- sensor_id referenziert die ID Spalte von Sensors
 );
 
--- Tabelle für ESL-Dateien
-CREATE TABLE `esl` (
+CREATE TABLE `CSV_Exports` (
     `ID` INT AUTO_INCREMENT PRIMARY KEY,
-    `esl_time_periods_ID` INT,
-    FOREIGN KEY (`esl_time_periods_ID`) REFERENCES `esl_time_periods`(`ID`)
+    `export_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `csv_data` TEXT NOT NULL,
+    `created_at` TIMESTAMP
 );
 
--- Tabelle für OBIS-Daten
-CREATE TABLE `obis` (
+CREATE TABLE `JSON_Exports` (
     `ID` INT AUTO_INCREMENT PRIMARY KEY,
-    `esl_ID` INT,
-    `code` VARCHAR(20),
-    `value` DECIMAL(10, 4),
-    `status` VARCHAR(10),
-    FOREIGN KEY (`esl_ID`) REFERENCES `esl`(`ID`)
+    `export_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `json_data` TEXT NOT NULL,
+    `created_at` TIMESTAMP
 );
 
 INSERT INTO `Users` (username, password_hash, email) VALUES
