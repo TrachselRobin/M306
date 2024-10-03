@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interaktives Säulendiagramm mit Zoomen und Bewegen</title>
-    <!-- Neuere Versionen von Chart.js und chartjs-plugin-zoom -->
+    <!-- External libraries and scripts -->
     <script src="./js/script.js"></script>
     <script src="./js/data.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.0"></script>
 
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/big-chart.css">
     <link rel="stylesheet" href="./css/sections.css">
@@ -19,42 +20,94 @@
 
 <body>
 
-    <header>
+<header>
+    <!-- Header content can go here -->
+</header>
 
-    </header>
+<main>
+    <!-- Main Chart Section -->
+    <section id="big-table">
+        <canvas id="big-chart"></canvas>
+    </section>
 
-    <main>
-        <section id="big-table">
-            <canvas id="big-chart"></canvas>
-        </section>
+    <!-- Consumption and Feed-in Data Section -->
+    <section id="charts">
+        <ul>
+            <li>
+                <p>Verbrauch Hochtarif</p>
+                <p><b id="verbrauch1">10000</b> kw</p>
+            </li>
+            <li>
+                <p>Verbrauch Niedertarif</p>
+                <p><b id="verbrauch2">12000</b> kw</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>Einspeisung Hochtarif</p>
+                <p><b id="einspeisung1">14000</b> kw</p>
+            </li>
+            <li>
+                <p>Einspeisung Niedertarif</p>
+                <p><b id="einspeisung2">16000</b> kw</p>
+            </li>
+        </ul>
+    </section>
 
-        <section id="charts">
-            <ul>
-                <li>
-                    <p>Verbrauch Hochtarif</p>
-                    <p><b id="verbrauch1">10000</b>kw</p>
-                </li>
-                <li>
-                    <p>Verbrauch Niedertarif</p>
-                    <p><b id="verbrauch2">12000</b>kw</p>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <p>Einspeisung Hochtarif</p>
-                    <p><b id="einspeisung1">14000</b>kw</p>
-                </li>
-                <li>
-                    <p>Einspeisung Niedertarif</p>
-                    <p><b id="einspeisung2">16000</b>kw</p>
-                </li>
-            </ul>
-        </section>
-    </main>
+    <!-- File Conversion Section -->
+    <section id="file-conversion">
+        <h2>Dateikonvertierung</h2>
+        <p>Konvertieren und laden Sie Ihre Dateien im CSV- oder JSON-Format herunter:</p>
 
-    <footer>
+        <!-- Button to download ESL data as CSV -->
+        <button onclick="convertToCSV()">ESL Daten als CSV herunterladen</button>
 
-    </footer>
+        <!-- Button to download ESL data as JSON -->
+        <button onclick="convertToJson()">ESL Daten als JSON herunterladen</button>
+
+        <script>
+            // Function to convert ESL data to CSV and download the zip file
+            function convertToCSV() {
+                fetch('http://127.0.0.1:3000/esl/convert/csv')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.blob();
+                    })
+                    .then(blob => {
+                        const downloadLink = document.createElement('a');
+                        const url = window.URL.createObjectURL(blob);
+                        downloadLink.href = url;
+                        downloadLink.download = 'esl_files_csv.zip';  // Download file name
+                        downloadLink.click();
+                        window.URL.revokeObjectURL(url);  // Clean up the URL object
+                    })
+                    .catch(error => console.error('Error converting to CSV:', error));
+            }
+
+            // Function to convert ESL data to JSON and download the zip file
+            function convertToJson() {
+                fetch('http://127.0.0.1:3000/esl/convert/json')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.blob();
+                    })
+                    .then(blob => {
+                        const downloadLink = document.createElement('a');
+                        const url = window.URL.createObjectURL(blob);
+                        downloadLink.href = url;
+                        downloadLink.download = 'esl_files_json.zip';  // Download file name
+                        downloadLink.click();
+                        window.URL.revokeObjectURL(url);  // Clean up the URL object
+                    })
+                    .catch(error => console.error('Error converting to JSON:', error));
+            }
+        </script>
+    </section>
+</main>
 
 </body>
 
