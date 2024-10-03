@@ -4,6 +4,14 @@
   DESCRIPTION:          CSS file for the frontend
 */
 
+:root {
+	--primary-color: #06070E;
+	--secondary-color: #FFF3F0;
+	--tertiary-color: #7F7EFF;
+	--quaternary-color: #A390E4;
+	--quinary-color: #0FA3B1;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -17,6 +25,7 @@ body {
 	align-items: center;
 	width: 100vw;
 	min-height: 100vh;
+	background-color: whitesmoke;
 }
 
 header,
@@ -28,14 +37,14 @@ footer {
 }
 
 main {
-	height: 100vh;
-	background-color: whitesmoke;
+	min-height: 100vh;
+	background-color: white;
 }
 
 header,
 footer {
 	height: 10vh;
-	background-color: rgb(20, 74, 88);
+	background-color: var(--primary-color);
 }
 
 @media (max-width: 1000px) {

@@ -7,11 +7,14 @@
     <title>Interaktives Säulendiagramm mit Zoomen und Bewegen</title>
     <!-- Neuere Versionen von Chart.js und chartjs-plugin-zoom -->
     <script src="./js/script.js"></script>
+    <script src="./js/data.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.0"></script>
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/big-chart.css">
+    <link rel="stylesheet" href="./css/sections.css">
+    <link rel="stylesheet" href="./css/font.css">
 </head>
 
 <body>
@@ -27,12 +30,24 @@
 
         <section id="charts">
             <ul>
-                <li></li>
-                <li></li>
+                <li>
+                    <p>Verbrauch Hochtarif</p>
+                    <p><b id="verbrauch1">10000</b>kw</p>
+                </li>
+                <li>
+                    <p>Verbrauch Niedertarif</p>
+                    <p><b id="verbrauch2">12000</b>kw</p>
+                </li>
             </ul>
             <ul>
-                <li></li>
-                <li></li>
+                <li>
+                    <p>Einspeisung Hochtarif</p>
+                    <p><b id="einspeisung1">14000</b>kw</p>
+                </li>
+                <li>
+                    <p>Einspeisung Niedertarif</p>
+                    <p><b id="einspeisung2">16000</b>kw</p>
+                </li>
             </ul>
         </section>
     </main>

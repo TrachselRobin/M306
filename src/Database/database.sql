@@ -29,25 +29,29 @@ CREATE TABLE `sdat_intervals` (
     FOREIGN KEY (`sdat_ID`) REFERENCES `sdat`(`ID`)
 );
 
--- Tabelle für ESL-Dateien
-CREATE TABLE `esl` (
-    `ID` INT AUTO_INCREMENT PRIMARY KEY,
-    `TimePeriodEnd` DATETIME UNIQUE  -- Es sollte jeweils immer nur einmal dieselbe TimePeriodEnd vorkommen
-);
-
--- Tabelle für OBIS-Daten
-CREATE TABLE `obis` (
-    `ID` INT AUTO_INCREMENT PRIMARY KEY,
-    `code` VARCHAR(20),
-    `value` DECIMAL(10, 4),
-    `status` VARCHAR(10)
-);
-
+-- Create esl_time_periods table before esl
 CREATE TABLE `esl_time_periods` (
     `ID` INT AUTO_INCREMENT PRIMARY KEY,
     `esl_ID` INT NOT NULL,
     `TimePeriodEnd` DATETIME NOT NULL,
     UNIQUE KEY (`TimePeriodEnd`)
+);
+
+-- Tabelle für ESL-Dateien
+CREATE TABLE `esl` (
+    `ID` INT AUTO_INCREMENT PRIMARY KEY,
+    `esl_time_periods_ID` INT,
+    FOREIGN KEY (`esl_time_periods_ID`) REFERENCES `esl_time_periods`(`ID`)
+);
+
+-- Tabelle für OBIS-Daten
+CREATE TABLE `obis` (
+    `ID` INT AUTO_INCREMENT PRIMARY KEY,
+    `esl_ID` INT,
+    `code` VARCHAR(20),
+    `value` DECIMAL(10, 4),
+    `status` VARCHAR(10),
+    FOREIGN KEY (`esl_ID`) REFERENCES `esl`(`ID`)
 );
 
 INSERT INTO `Users` (username, password_hash, email) VALUES

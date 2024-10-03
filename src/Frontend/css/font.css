@@ -1,0 +1,15 @@
+/*
+:root {
+	--primary-color: #06070E;
+	--secondary-color: #FFF3F0;
+	--tertiary-color: #7F7EFF;
+	--quaternary-color: #A390E4;
+	--quinary-color: #0FA3B1;
+}
+*/
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--primary-color);
+}
